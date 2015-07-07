@@ -9,15 +9,45 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    
+    var completedTimers = [Timer]()
 
+    @IBOutlet weak var lastLabel: UILabel!
+    @IBOutlet weak var lastTime: UILabel!
+    @IBOutlet weak var nextTime: UILabel!
+    @IBOutlet weak var leftTimer: UILabel!
+    @IBOutlet weak var rightTimer: UILabel!
+    
+    @IBAction func leftButton(sender: UIButton) {
+    }
+    
+    
+    @IBAction func rightButton(sender: UIButton) {
+    }
+    
+    @IBAction func resetButton(sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        completedTimers = [Timer(beginTime: "timer 1"), Timer(beginTime: "timer 2")]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToAll" {
+            let detailsController = segue.destinationViewController as! AllTableViewController
+            detailsController.completedTimers = completedTimers
+        } else {
+            super.prepareForSegue(segue, sender: sender)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,14 +100,9 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

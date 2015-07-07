@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab9e0f82-c985-4a38-93b1-97a48a664bdf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/AllTableViewCell.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/AllTableViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/SettingsTableViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/app-baby.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app-baby/ViewController.swift" afterPath="$PROJECT_DIR$/app-baby/HomeViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Base.lproj/LaunchScreen.xib" afterPath="$PROJECT_DIR$/app-baby/Base.lproj/LaunchScreen.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/HomeTableViewController.swift" afterPath="$PROJECT_DIR$/app-baby/HomeTableViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/app-baby.xcodeproj/project.pbxproj" />
     </list>
     <ignored path="app-baby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -362,33 +348,9 @@
         <state ui-designer-zoom="0.2790816472336535" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-baby/HomeViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard">
       <provider selected="true" editor-type-id="appcode-designer">
         <state ui-designer-zoom="0.2790816472336535" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-baby/HomeViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-baby/HomeViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17751479" vertical-offset="0" max-vertical-offset="676">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="44" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard">

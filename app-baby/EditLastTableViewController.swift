@@ -1,21 +1,17 @@
 //
-//  AllTableViewController.swift
+//  EditLastTableViewController.swift
 //  app-baby
 //
-//  Created by Thiago Boucas Correa on 7/5/15.
+//  Created by Thiago Boucas Correa on 7/7/15.
 //  Copyright (c) 2015 Thiago Boucas Correa. All rights reserved.
 //
 
 import UIKit
 
-class AllTableViewController: UITableViewController {
-
-    var completedTimers = [Timer]()
+class EditLastTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //completedTimers = [Timer(beginTime: "timer 1"), Timer(beginTime: "timer 2")]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,25 +25,15 @@ class AllTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return completedTimers.count
-    }
-
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =
-        self.tableView.dequeueReusableCellWithIdentifier(
-            "timerCell", forIndexPath: indexPath)
-            as! AllTableViewCell
-        
-        let timer = completedTimers[indexPath.row]
-        
-        cell.timerLabel.text = timer.beginTime
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+
+        // Configure the cell...
+
         return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -56,22 +42,18 @@ class AllTableViewController: UITableViewController {
         return true
     }
     */
-    
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            completedTimers.removeAtIndex(indexPath.row)
+            // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.

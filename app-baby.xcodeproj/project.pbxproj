@@ -15,6 +15,10 @@
 		AF6F8C441B49D37100A46D05 /* AllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */; };
 		AF6F8CDC1B4B1ADB00A46D05 /* AllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */; };
 		AF6F8CE01B4B4C5600A46D05 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */; };
+		AF6F8CE41B4BE31000A46D05 /* EditLastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CE31B4BE31000A46D05 /* EditLastTableViewController.swift */; };
+		AF6F8CE61B4BE6F500A46D05 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CE51B4BE6F500A46D05 /* Timer.swift */; };
+		AF6F8CEC1B4C4D8900A46D05 /* EditNextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CEB1B4C4D8900A46D05 /* EditNextTableViewController.swift */; };
+		AF6F8CEE1B4C4DA200A46D05 /* NewTimerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CED1B4C4DA200A46D05 /* NewTimerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTableViewController.swift; sourceTree = "<group>"; };
 		AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTableViewCell.swift; sourceTree = "<group>"; };
 		AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		AF6F8CE31B4BE31000A46D05 /* EditLastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLastTableViewController.swift; sourceTree = "<group>"; };
+		AF6F8CE51B4BE6F500A46D05 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		AF6F8CEB1B4C4D8900A46D05 /* EditNextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNextTableViewController.swift; sourceTree = "<group>"; };
+		AF6F8CED1B4C4DA200A46D05 /* NewTimerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTimerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,10 @@
 				AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */,
 				AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */,
 				AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */,
+				AF6F8CE31B4BE31000A46D05 /* EditLastTableViewController.swift */,
+				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
+				AF6F8CEB1B4C4D8900A46D05 /* EditNextTableViewController.swift */,
+				AF6F8CED1B4C4DA200A46D05 /* NewTimerTableViewController.swift */,
 			);
 			path = "app-baby";
 			sourceTree = "<group>";
@@ -218,8 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6F8CEC1B4C4D8900A46D05 /* EditNextTableViewController.swift in Sources */,
 				AF6F8CE01B4B4C5600A46D05 /* HomeTableViewController.swift in Sources */,
+				AF6F8CEE1B4C4DA200A46D05 /* NewTimerTableViewController.swift in Sources */,
+				AF6F8CE61B4BE6F500A46D05 /* Timer.swift in Sources */,
 				AF6F8C441B49D37100A46D05 /* AllTableViewController.swift in Sources */,
+				AF6F8CE41B4BE31000A46D05 /* EditLastTableViewController.swift in Sources */,
 				AF6F8CDC1B4B1ADB00A46D05 /* AllTableViewCell.swift in Sources */,
 				AF6F8C241B49C87F00A46D05 /* AppDelegate.swift in Sources */,
 			);
