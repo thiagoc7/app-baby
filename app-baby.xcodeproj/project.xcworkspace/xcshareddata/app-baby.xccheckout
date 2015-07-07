@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>640B6E03-FA8B-4FEF-9994-C070D6C21AB9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>app-baby</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>917BE5736CC499D8E791A9695E09CC111AE5B429</key>
+		<string>https://github.com/thiagoc7/app-baby.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>app-baby.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>917BE5736CC499D8E791A9695E09CC111AE5B429</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/thiagoc7/app-baby.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>917BE5736CC499D8E791A9695E09CC111AE5B429</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>917BE5736CC499D8E791A9695E09CC111AE5B429</string>
+			<key>IDESourceControlWCCName</key>
+			<string>app-baby</string>
+		</dict>
+	</array>
+</dict>
+</plist>
