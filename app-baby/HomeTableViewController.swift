@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var completedTimers = [Timer]()
+    //var completedTimers = [Timer]()
 
     @IBOutlet weak var lastLabel: UILabel!
     @IBOutlet weak var lastTime: UILabel!
@@ -32,7 +32,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        completedTimers = [Timer(beginTime: "timer 1"), Timer(beginTime: "timer 2")]
+        //completedTimers = [Timer(beginTime: "timer 1"), Timer(beginTime: "timer 2")]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,8 +43,8 @@ class HomeTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToAll" {
-            let detailsController = segue.destinationViewController as! AllTableViewController
-            detailsController.completedTimers = completedTimers
+            //let detailsController = segue.destinationViewController as! AllTableViewController
+            //detailsController.completedTimers = completedTimers
         } else {
             super.prepareForSegue(segue, sender: sender)
         }

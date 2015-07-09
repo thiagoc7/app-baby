@@ -14,19 +14,15 @@ class AllTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //completedTimers = [Timer(beginTime: "timer 1"), Timer(beginTime: "timer 2")]
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadSampleTimers()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func loadSampleTimers() {
+        let timer1 = Timer(beginTime: "Timer 1")
+        let timer2 = Timer(beginTime: "Timer 3")
+        let timer3 = Timer(beginTime: "Timer 3")
+        
+        completedTimers += [timer1, timer1, timer3]
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -88,14 +84,34 @@ class AllTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetail" {
+            let timerDetailViewController = segue.destinationViewController as! NewTimerTableViewController
+            
+            // Get the cell that generated this segue.
+            if let selectedTimerCell = sender as? AllTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedTimerCell)!
+                let selectedMeal = completedTimers[indexPath.row]
+                timerDetailViewController.timer = selectedMeal
+            }
+        }
+        else if segue.identifier == "AddTimer" {
+            print("Adding new timer.")
+        }
     }
-    */
+    
+    
+    @IBAction func unwindToTimersList(sender: UIStoryboardSegue) {
+        
+        if let sourceViewController = sender.sourceViewController as? NewTimerTableViewController, timer = sourceViewController.timer {
+            // Add a new meal.
+            let newIndexPath = NSIndexPath(forRow: completedTimers.count, inSection: 0)
+            completedTimers.append(timer)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 
 }
