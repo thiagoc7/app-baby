@@ -8,9 +8,11 @@
 
 import UIKit
 
+var completedTimers = [Timer]()
+
 class HomeTableViewController: UITableViewController {
     
-    //var completedTimers = [Timer]()
+    // MARK: Outlets
 
     @IBOutlet weak var lastLabel: UILabel!
     @IBOutlet weak var lastTime: UILabel!
@@ -28,81 +30,70 @@ class HomeTableViewController: UITableViewController {
     @IBAction func resetButton(sender: UIButton) {
     }
     
+    // MARK: Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //completedTimers = [Timer(beginTime: "timer 1"), Timer(beginTime: "timer 2")]
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goToAll" {
-            //let detailsController = segue.destinationViewController as! AllTableViewController
-            //detailsController.completedTimers = completedTimers
-        } else {
-            super.prepareForSegue(segue, sender: sender)
+    // MARK: Actions
+    
+    @IBAction func leftTimerToggle(sender: UITapGestureRecognizer) {
+        leftTimerRunning = !leftTimerRunning
+    }
+    
+    @IBAction func rightTimerToggle(sender: UITapGestureRecognizer) {
+        rightTimerRunning = !rightTimerRunning
+    }
+    
+    // MARK : Stopwatch
+    
+    // left
+    var leftTimerObject = NSTimer()
+    var leftTimerSeconds = 0.0
+    
+    var leftTimerRunning: Bool = false {
+        didSet {
+            if leftTimerRunning {
+                leftTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLeftTimer"), userInfo: nil, repeats: true)
+            } else {
+                leftTimerObject.invalidate()
+            }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    func updateLeftTimer() {
+        leftTimerSeconds++
+        leftTimer.text = secondsDisplay(leftTimerSeconds)
+    }
     
+    // right
+    var rightTimerObject = NSTimer()
+    var rightTimerSeconds = 0.0
+    
+    var rightTimerRunning: Bool = false {
+        didSet {
+            if rightTimerRunning {
+                rightTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateRightTimer"), userInfo: nil, repeats: true)
+            } else {
+                rightTimerObject.invalidate()
+            }
+        }
+    }
+    
+    func updateRightTimer() {
+        rightTimerSeconds++
+        rightTimer.text = secondsDisplay(rightTimerSeconds)
+    }
+    
+    
+    // MARK: Helpers
+    
+    func secondsDisplay(seconds: Double) -> String {
+        let minutes = UInt8(seconds / 60.0)
+        let seconds = UInt8(seconds % 60.0)
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        return "\(strMinutes):\(strSeconds)"
+    }
 }

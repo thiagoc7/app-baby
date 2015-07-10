@@ -10,8 +10,6 @@ import UIKit
 
 class AllTableViewController: UITableViewController {
 
-    var completedTimers = [Timer]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleTimers()
@@ -67,50 +65,18 @@ class AllTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     
     // MARK: - Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            let timerDetailViewController = segue.destinationViewController as! NewTimerTableViewController
-            
-            // Get the cell that generated this segue.
-            if let selectedTimerCell = sender as? AllTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedTimerCell)!
-                let selectedMeal = completedTimers[indexPath.row]
-                timerDetailViewController.timer = selectedMeal
-            }
-        }
-        else if segue.identifier == "AddTimer" {
-            print("Adding new timer.")
-        }
-    }
     
     
     @IBAction func unwindToTimersList(sender: UIStoryboardSegue) {
         
         if let sourceViewController = sender.sourceViewController as? NewTimerTableViewController, timer = sourceViewController.timer {
-            // Add a new meal.
-            let newIndexPath = NSIndexPath(forRow: completedTimers.count, inSection: 0)
-            completedTimers.append(timer)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            // Add a new timer.
+            let newIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+            completedTimers.insert(timer, atIndex: 0)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
         }
     }
 
