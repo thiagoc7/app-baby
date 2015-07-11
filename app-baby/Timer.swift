@@ -6,18 +6,20 @@
 //  Copyright (c) 2015 Thiago Boucas Correa. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
-class Timer {
+// Dog model
+class Timer: Object {
+    dynamic var beginTime = NSDate()
+    dynamic var leftTimer: Double = 0.0
+    dynamic var rightTimer: Double = 0.0
+    dynamic var leftIsTheLast = true
     
-    var beginTime: String
-    var leftTimer: String
-    var rightTimer: String
-    
-    init( beginTime: String, leftTimer: String = "", rightTimer: String = "" ) {
-        self.beginTime = beginTime
-        self.leftTimer = leftTimer
-        self.rightTimer = rightTimer
+    var lastSide: String {
+        if self.leftIsTheLast {
+            return "L"
+        } else {
+            return "R"
+        }
     }
-    
 }

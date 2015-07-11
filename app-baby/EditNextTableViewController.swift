@@ -10,8 +10,17 @@ import UIKit
 
 class EditNextTableViewController: UITableViewController {
 
+    @IBOutlet weak var timePicker: UIDatePicker!
+    
+    @IBAction func timePickerChanged(sender: UIDatePicker) {
+        nextTimeDelay = timePicker.countDownDuration
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timePicker.datePickerMode = UIDatePickerMode.CountDownTimer
+        timePicker.countDownDuration = nextTimeDelay
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -70,7 +79,7 @@ class EditNextTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -78,6 +87,6 @@ class EditNextTableViewController: UITableViewController {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

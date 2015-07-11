@@ -7,20 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AllTableViewController: UITableViewController {
+    
+    let completedTimers = Realm().objects(Timer).sorted("beginTime", ascending: false)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleTimers()
-    }
-    
-    func loadSampleTimers() {
-        let timer1 = Timer(beginTime: "Timer 1")
-        let timer2 = Timer(beginTime: "Timer 3")
-        let timer3 = Timer(beginTime: "Timer 3")
-        
-        completedTimers += [timer1, timer1, timer3]
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -38,9 +32,26 @@ class AllTableViewController: UITableViewController {
             as! AllTableViewCell
         
         let timer = completedTimers[indexPath.row]
+        cell.sideLabel.text = timer.lastSide
+        cell.date.text = dateDisplay(timer.beginTime)
+        cell.left.text = secondsDisplay(timer.leftTimer)
+        cell.right.text = secondsDisplay(timer.rightTimer)
         
-        cell.timerLabel.text = timer.beginTime
         return cell
+    }
+    
+    func secondsDisplay(seconds: Double) -> String {
+        let minutes = UInt8(seconds / 60.0)
+        let seconds = UInt8(seconds % 60.0)
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        return "\(strMinutes):\(strSeconds)"
+    }
+    
+    func dateDisplay (date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "d/MM - HH:mm"
+        return dateFormatter.stringFromDate(date)
     }
 
     /*
@@ -59,25 +70,13 @@ class AllTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            completedTimers.removeAtIndex(indexPath.row)
+            let realm = Realm()
+            realm.write {
+                realm.delete(self.completedTimers[indexPath.row])
+            }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-
-    
-    // MARK: - Navigation
-    
-    
-    @IBAction func unwindToTimersList(sender: UIStoryboardSegue) {
-        
-        if let sourceViewController = sender.sourceViewController as? NewTimerTableViewController, timer = sourceViewController.timer {
-            // Add a new timer.
-            let newIndexPath = NSIndexPath(forRow: 0, inSection: 0)
-            completedTimers.insert(timer, atIndex: 0)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
-        }
-    }
-
 }

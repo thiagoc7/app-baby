@@ -9,8 +9,11 @@
 import UIKit
 
 class AllTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var timerLabel: UILabel!
+    
+    @IBOutlet weak var sideLabel: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var left: UILabel!
+    @IBOutlet weak var right: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
