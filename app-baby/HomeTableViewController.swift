@@ -15,13 +15,15 @@ class HomeTableViewController: UITableViewController {
     
     // MARK: Outlets
 
-    @IBOutlet weak var lastLabel: UILabel!
     @IBOutlet weak var lastTime: UILabel!
+    @IBOutlet weak var lastTimeLeft: UILabel!
+    @IBOutlet weak var lastTimeRight: UILabel!
     @IBOutlet weak var nextTime: UILabel!
     @IBOutlet weak var leftTimer: UILabel!
     @IBOutlet weak var rightTimer: UILabel!
     @IBOutlet weak var leftTableCell: UITableViewCell!
     @IBOutlet weak var rightTableCell: UITableViewCell!
+    @IBOutlet weak var startLabel: UILabel!
     
     
     // MARK: Init
@@ -34,16 +36,17 @@ class HomeTableViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        setLastTimer()
+    }
+    
     
     // MARK: Background
     
     let store = NSUserDefaults.standardUserDefaults()
     
     func applicationDidBecomeActive() {
-        if store.objectForKey("startTime") != nil {
-            startTime = store.objectForKey("startTime") as? NSDate
-        }
-        
         if store.objectForKey("nextTimeDelay") != nil {
             nextTimeDelay = store.objectForKey("nextTimeDelay") as! Double
         }
@@ -64,7 +67,10 @@ class HomeTableViewController: UITableViewController {
                 resumeRightTimer(store.objectForKey("rightTimerSeconds") as! Double, backgroundTime: backgroundTime)
                 store.removeObjectForKey("rightTimerSeconds")
             }
+
+            startTime = store.objectForKey("startTime") as? NSDate
             
+            store.removeObjectForKey("startTime")
             store.removeObjectForKey("background")
             store.removeObjectForKey("leftIsTheLast")
         }
@@ -76,8 +82,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     func resumeRightTimer(seconds: Double, backgroundTime: NSDate) {
-        let addSeconds: Double = 100
-        rightTimerSeconds = seconds + addSeconds
+        rightTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
         rightTimerRunning = true
     }
     
@@ -85,6 +90,8 @@ class HomeTableViewController: UITableViewController {
         if isRunning {
             store.setObject(true, forKey: "background")
             store.setObject(NSDate(), forKey: "backgroundTime")
+            store.setObject(startTime, forKey: "startTime")
+            store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
             
             if leftTimerRunning {
                 leftTimerRunning = false
@@ -93,7 +100,7 @@ class HomeTableViewController: UITableViewController {
             
             if rightTimerRunning {
                 rightTimerRunning = false
-                store.setObject(rightTimerRunning, forKey: "rightTimerSeconds")
+                store.setObject(rightTimerSeconds, forKey: "rightTimerSeconds")
             }
         }
     }
@@ -119,10 +126,7 @@ class HomeTableViewController: UITableViewController {
             
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH:mm"
-            lastTime.text = dateFormatter.stringFromDate(startTime!)
-            
-            let nextTimeDateObject = startTime!.dateByAddingTimeInterval(nextTimeDelay)
-            nextTime.text = dateFormatter.stringFromDate(nextTimeDateObject)
+            startLabel.text = dateFormatter.stringFromDate(startTime!)
         }
     }
     
@@ -130,9 +134,6 @@ class HomeTableViewController: UITableViewController {
         didSet {
             if isRunning {
                 startTime = NSDate()
-                lastLabel.text = "Running"
-            } else {
-                lastLabel.text = "Last"
             }
         }
     }
@@ -201,6 +202,8 @@ class HomeTableViewController: UITableViewController {
         rightTimerRunning = false
         rightTimer.text = "00:00"
         rightTimerSeconds = 0.0
+        startLabel.text = "-- --"
+        setLastTimer()
     }
     
     
@@ -238,22 +241,91 @@ class HomeTableViewController: UITableViewController {
         return "\(strMinutes):\(strSeconds)"
     }
     
-    func updateNextTimerLabel () {
+    func setLastTimer() {
+        let lastTimerObject = realm.objects(Timer).last
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm"
-        let nextTimeDateObject = startTime!.dateByAddingTimeInterval(nextTimeDelay)
+        lastTime.text = dateFormatter.stringFromDate(lastTimerObject!.beginTime)
+        
+        let nextTimeDateObject = lastTimerObject!.beginTime.dateByAddingTimeInterval(nextTimeDelay)
         nextTime.text = dateFormatter.stringFromDate(nextTimeDateObject)
         
-        store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
-        store.synchronize()
+        lastTimeLeft.text = secondsDisplay(lastTimerObject!.leftTimer)
+        lastTimeRight.text = secondsDisplay(lastTimerObject!.rightTimer)
+        
+        if lastTimerObject!.leftIsTheLast {
+            lastTimeLeft.textColor = UIColor.blueColor()
+            lastTimeRight.textColor = UIColor.lightGrayColor()
+        } else {
+            lastTimeLeft.textColor = UIColor.lightGrayColor()
+            lastTimeRight.textColor = UIColor.blueColor()
+        }
     }
     
     
-    // MARK: Navigation
+    // MARK: Swipe Actions
     
-    @IBAction func unwindToHome(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? EditNextTableViewController {
-            updateNextTimerLabel()
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        let less1 = UITableViewRowAction(style: .Normal, title: "-1m") { action, index in
+            if indexPath.row == 0 {
+                
+                if self.leftTimerSeconds < 61 {
+                    self.leftTimerSeconds = 0
+                } else {
+                    self.leftTimerSeconds -= 60
+                }
+                
+            } else if indexPath.row == 1 {
+                
+                if self.rightTimerSeconds < 61 {
+                    self.rightTimerSeconds = 0
+                } else {
+                    self.rightTimerSeconds -= 60
+                }
+                
+            }
         }
+        
+        
+        let more1 = UITableViewRowAction(style: .Normal, title: "+1m") { action, index in
+            if indexPath.row == 0 {
+                self.leftTimerSeconds += 60
+            } else if indexPath.row == 1 {
+                self.rightTimerSeconds += 60
+            }
+        }
+        
+        let startLess5 = UITableViewRowAction(style: .Normal, title: "-5m") { action, index in
+            self.startTime = self.startTime!.dateByAddingTimeInterval(-300)
+        }
+        
+        let startMore5 = UITableViewRowAction(style: .Normal, title: "+5m") { action, index in
+            self.startTime = self.startTime!.dateByAddingTimeInterval(300)
+        }
+
+        
+        less1.backgroundColor = UIColor.redColor()
+        more1.backgroundColor = UIColor.lightGrayColor()
+        startLess5.backgroundColor = UIColor.redColor()
+        startMore5.backgroundColor = UIColor.lightGrayColor()
+        
+        if indexPath.section == 1 {
+            return [more1, less1]
+        } else {
+            return [startMore5, startLess5]
+        }
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        if isRunning && (indexPath.section == 1 || indexPath.section == 2) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    override  func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // you need to implement this method too or you can't swipe to display the actions
     }
 }
