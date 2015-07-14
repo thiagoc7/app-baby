@@ -254,22 +254,24 @@ class HomeTableViewController: UITableViewController {
     
     func setLastTimer() {
         let lastTimerObject = realm.objects(Timer).last
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        lastTime.text = dateFormatter.stringFromDate(lastTimerObject!.beginTime)
-        
-        let nextTimeDateObject = lastTimerObject!.beginTime.dateByAddingTimeInterval(nextTimeDelay)
-        nextTime.text = dateFormatter.stringFromDate(nextTimeDateObject)
-        
-        lastTimeLeft.text = secondsDisplay(lastTimerObject!.leftTimer)
-        lastTimeRight.text = secondsDisplay(lastTimerObject!.rightTimer)
-        
-        if lastTimerObject!.leftIsTheLast {
-            leftImage.highlighted = true
-            rightImage.highlighted = false
-        } else {
-            leftImage.highlighted = false
-            rightImage.highlighted = true
+        if lastTimerObject != nil {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            lastTime.text = dateFormatter.stringFromDate(lastTimerObject!.beginTime)
+            
+            let nextTimeDateObject = lastTimerObject!.beginTime.dateByAddingTimeInterval(nextTimeDelay)
+            nextTime.text = dateFormatter.stringFromDate(nextTimeDateObject)
+            
+            lastTimeLeft.text = secondsDisplay(lastTimerObject!.leftTimer)
+            lastTimeRight.text = secondsDisplay(lastTimerObject!.rightTimer)
+            
+            if lastTimerObject!.leftIsTheLast {
+                leftImage.highlighted = true
+                rightImage.highlighted = false
+            } else {
+                leftImage.highlighted = false
+                rightImage.highlighted = true
+            }
         }
     }
     

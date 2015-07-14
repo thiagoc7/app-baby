@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B4BDB132712EA93681E194C /* Pods_app_baby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B375FF8190450F9745440115 /* Pods_app_baby.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AF399E461B553F8B0072580C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF399E451B553F8B0072580C /* SettingsTableViewController.swift */; };
 		AF6F8C241B49C87F00A46D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8C231B49C87F00A46D05 /* AppDelegate.swift */; };
 		AF6F8C291B49C87F00A46D05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F8C271B49C87F00A46D05 /* Main.storyboard */; };
 		AF6F8C2B1B49C87F00A46D05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */; };
@@ -36,6 +37,7 @@
 		658E10AEAB95593308FEF8A6 /* Pods_app_babyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_babyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC1A87EEDC24B7B1EF5DBAB /* Pods-app-baby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-baby.release.xcconfig"; path = "Pods/Target Support Files/Pods-app-baby/Pods-app-baby.release.xcconfig"; sourceTree = "<group>"; };
 		A06874D9DE9AAD75C343D311 /* Pods-app-baby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-baby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app-baby/Pods-app-baby.debug.xcconfig"; sourceTree = "<group>"; };
+		AF399E451B553F8B0072580C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		AF6F8C1E1B49C87F00A46D05 /* app-baby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-baby.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F8C221B49C87F00A46D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6F8C231B49C87F00A46D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */,
 				AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */,
 				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
+				AF399E451B553F8B0072580C /* SettingsTableViewController.swift */,
 			);
 			path = "app-baby";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				AF6F8CE01B4B4C5600A46D05 /* HomeTableViewController.swift in Sources */,
 				AF6F8CE61B4BE6F500A46D05 /* Timer.swift in Sources */,
+				AF399E461B553F8B0072580C /* SettingsTableViewController.swift in Sources */,
 				AF6F8C441B49D37100A46D05 /* AllTableViewController.swift in Sources */,
 				AF6F8CDC1B4B1ADB00A46D05 /* AllTableViewCell.swift in Sources */,
 				AF6F8C241B49C87F00A46D05 /* AppDelegate.swift in Sources */,
