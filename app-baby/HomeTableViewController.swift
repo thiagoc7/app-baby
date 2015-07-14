@@ -20,11 +20,17 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet weak var lastTimeRight: UILabel!
     @IBOutlet weak var nextTime: UILabel!
     @IBOutlet weak var leftTimer: UILabel!
+    @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightTimer: UILabel!
+    @IBOutlet weak var rightImage: UIImageView!
     @IBOutlet weak var leftTableCell: UITableViewCell!
     @IBOutlet weak var rightTableCell: UITableViewCell!
     @IBOutlet weak var startLabel: UILabel!
     
+    @IBOutlet weak var leftIcon: UIImageView!
+    @IBOutlet weak var rightIcon: UIImageView!
+    @IBOutlet weak var leftPlay: UIImageView!
+    @IBOutlet weak var rightPlay: UIImageView!
     
     // MARK: Init
     
@@ -151,11 +157,13 @@ class HomeTableViewController: UITableViewController {
             if leftTimerRunning {
                 leftTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLeftTimer"), userInfo: nil, repeats: true)
                 leftIsTheLast = true
+                leftPlay.highlighted = true
                 if !isRunning {
                     isRunning = true
                 }
             } else {
                 leftTimerObject.invalidate()
+                leftPlay.highlighted = false
             }
         }
     }
@@ -174,11 +182,13 @@ class HomeTableViewController: UITableViewController {
             if rightTimerRunning {
                 rightTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateRightTimer"), userInfo: nil, repeats: true)
                 leftIsTheLast = false
+                rightPlay.highlighted = true
                 if !isRunning {
                     isRunning = true
                 }
             } else {
                 rightTimerObject.invalidate()
+                rightPlay.highlighted = false
             }
         }
     }
@@ -190,7 +200,7 @@ class HomeTableViewController: UITableViewController {
     
     // reset
     
-    @IBAction func resetButton(sender: UIButton) {
+    @IBAction func reset(sender: UITapGestureRecognizer) {
         if isRunning {
             appendNewTimer ()
         }
@@ -204,6 +214,7 @@ class HomeTableViewController: UITableViewController {
         rightTimerSeconds = 0.0
         startLabel.text = "-- --"
         setLastTimer()
+
     }
     
     
@@ -212,11 +223,11 @@ class HomeTableViewController: UITableViewController {
     var leftIsTheLast: Bool = false {
         didSet {
             if leftIsTheLast {
-                leftTableCell.accessoryType = UITableViewCellAccessoryType.Checkmark
-                rightTableCell.accessoryType = UITableViewCellAccessoryType.None
+                rightIcon.highlighted = false
+                leftIcon.highlighted = true
             } else {
-                leftTableCell.accessoryType = UITableViewCellAccessoryType.None
-                rightTableCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                leftIcon.highlighted = false
+                rightIcon.highlighted = true
             }
         }
     }
@@ -254,12 +265,25 @@ class HomeTableViewController: UITableViewController {
         lastTimeRight.text = secondsDisplay(lastTimerObject!.rightTimer)
         
         if lastTimerObject!.leftIsTheLast {
-            lastTimeLeft.textColor = UIColor.blueColor()
-            lastTimeRight.textColor = UIColor.lightGrayColor()
+            leftImage.highlighted = true
+            rightImage.highlighted = false
         } else {
-            lastTimeLeft.textColor = UIColor.lightGrayColor()
-            lastTimeRight.textColor = UIColor.blueColor()
+            leftImage.highlighted = false
+            rightImage.highlighted = true
         }
+    }
+    
+    func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor {
+        var scanner = NSScanner(string:colorCode)
+        var color:UInt32 = 0;
+        scanner.scanHexInt(&color)
+        
+        let mask = 0x000000FF
+        let r = CGFloat(Float(Int(color >> 16) & mask)/255.0)
+        let g = CGFloat(Float(Int(color >> 8) & mask)/255.0)
+        let b = CGFloat(Float(Int(color) & mask)/255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
     }
     
     
@@ -304,9 +328,9 @@ class HomeTableViewController: UITableViewController {
         }
 
         
-        less1.backgroundColor = UIColor.redColor()
+        less1.backgroundColor = UIColorFromRGB("FC3158")
         more1.backgroundColor = UIColor.lightGrayColor()
-        startLess5.backgroundColor = UIColor.redColor()
+        startLess5.backgroundColor = UIColorFromRGB("FC3158")
         startMore5.backgroundColor = UIColor.lightGrayColor()
         
         if indexPath.section == 1 {

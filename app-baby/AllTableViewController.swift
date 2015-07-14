@@ -32,10 +32,15 @@ class AllTableViewController: UITableViewController {
             as! AllTableViewCell
         
         let timer = completedTimers[indexPath.row]
-        cell.sideLabel.text = timer.lastSide
         cell.date.text = dateDisplay(timer.beginTime)
         cell.left.text = secondsDisplay(timer.leftTimer)
         cell.right.text = secondsDisplay(timer.rightTimer)
+        
+        if timer.leftIsTheLast {
+            cell.leftImage.highlighted = true
+        } else {
+            cell.rightImage.highlighted = true
+        }
         
         return cell
     }
