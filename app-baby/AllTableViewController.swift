@@ -33,6 +33,7 @@ class AllTableViewController: UITableViewController {
         
         let timer = completedTimers[indexPath.row]
         cell.date.text = dateDisplay(timer.beginTime)
+        cell.dateSmall.text = dateDisplay2(timer.beginTime)
         cell.left.text = secondsDisplay(timer.leftTimer)
         cell.right.text = secondsDisplay(timer.rightTimer)
         
@@ -55,7 +56,13 @@ class AllTableViewController: UITableViewController {
     
     func dateDisplay (date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "d/MM - HH:mm"
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.stringFromDate(date)
+    }
+    
+    func dateDisplay2 (date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "d/M"
         return dateFormatter.stringFromDate(date)
     }
 

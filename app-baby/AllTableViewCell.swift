@@ -11,6 +11,7 @@ import UIKit
 class AllTableViewCell: UITableViewCell {
     
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var dateSmall: UILabel!
     @IBOutlet weak var left: UILabel!
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var right: UILabel!
