@@ -85,6 +85,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		933C00641B56D932009B5988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8C231B49C87F00A46D05 /* AppDelegate.swift */,
+				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		933C00651B56D939009B5988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */,
+				AF6F8C271B49C87F00A46D05 /* Main.storyboard */,
+				AF6F8C2C1B49C87F00A46D05 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		933C00661B56D94D009B5988 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		933C00671B56D95C009B5988 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */,
+				AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */,
+				AF399E451B553F8B0072580C /* SettingsTableViewController.swift */,
+				AF05DD151B55A07B00D17428 /* PickerViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		AF6F8C151B49C87F00A46D05 = {
 			isa = PBXGroup;
 			children = (
@@ -108,17 +146,11 @@
 		AF6F8C201B49C87F00A46D05 /* app-baby */ = {
 			isa = PBXGroup;
 			children = (
-				AF6F8C231B49C87F00A46D05 /* AppDelegate.swift */,
-				AF6F8C271B49C87F00A46D05 /* Main.storyboard */,
-				AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */,
-				AF6F8C2C1B49C87F00A46D05 /* LaunchScreen.xib */,
+				933C00641B56D932009B5988 /* Model */,
+				933C00651B56D939009B5988 /* View */,
+				933C00671B56D95C009B5988 /* ViewController */,
+				933C00661B56D94D009B5988 /* Resources */,
 				AF6F8C211B49C87F00A46D05 /* Supporting Files */,
-				AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */,
-				AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */,
-				AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */,
-				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
-				AF399E451B553F8B0072580C /* SettingsTableViewController.swift */,
-				AF05DD151B55A07B00D17428 /* PickerViewController.swift */,
 			);
 			path = "app-baby";
 			sourceTree = "<group>";
