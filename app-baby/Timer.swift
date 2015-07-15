@@ -10,10 +10,10 @@ import RealmSwift
 
 // Dog model
 class Timer: Object {
-    dynamic var beginTime = NSDate()
-    dynamic var leftTimer: Double = 0.0
-    dynamic var rightTimer: Double = 0.0
-    dynamic var leftIsTheLast = true
+    var startTime = NSDate()
+    var leftTimerSeconds: Double = 0.0
+    var rightTimerSeconds: Double = 0.0
+    var leftIsTheLast = true
     
     var lastSide: String {
         if self.leftIsTheLast {
@@ -21,5 +21,21 @@ class Timer: Object {
         } else {
             return "R"
         }
+    }
+    
+    var leftTimerSecondsString: String {
+        return secondsDisplay(leftTimerSeconds)
+    }
+    
+    var rightTimerSecondsString: String {
+        return secondsDisplay(rightTimerSeconds)
+    }
+    
+    func secondsDisplay(seconds: Double) -> String {
+        let minutes = UInt8(seconds / 60.0)
+        let seconds = UInt8(seconds % 60.0)
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        return "\(strMinutes):\(strSeconds)"
     }
 }

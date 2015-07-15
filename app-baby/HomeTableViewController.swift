@@ -11,7 +11,7 @@ import RealmSwift
 
 var nextTimeDelay: Double = 10800
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     
     // MARK: Outlets
 
@@ -32,14 +32,15 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet weak var leftPlay: UIImageView!
     @IBOutlet weak var rightPlay: UIImageView!
     
-    // MARK: Init
+    let timerManager = TimerManager()
     
-    let realm = Realm()
+    // MARK: Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        timerManager.delegate = self
+        NSNotificationCenter.defaultCenter().addObserver(timerManager, selector: "applicationWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(timerManager, selector: "applicationDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,231 +48,58 @@ class HomeTableViewController: UITableViewController {
         setLastTimer()
     }
     
-    
-    // MARK: Background
-    
-    let store = NSUserDefaults.standardUserDefaults()
-    
-    func applicationDidBecomeActive() {
-        if store.objectForKey("nextTimeDelay") != nil {
-            nextTimeDelay = store.objectForKey("nextTimeDelay") as! Double
-        }
-        
-        if store.objectForKey("leftIsTheLast") != nil {
-            leftIsTheLast = store.objectForKey("leftIsTheLast") as! Bool
-        }
-        
-        if store.objectForKey("background") != nil {
-            let backgroundTime = store.objectForKey("backgroundTime") as! NSDate
-            
-            if store.objectForKey("leftTimerSeconds") != nil {
-                resumeLeftTimer(store.objectForKey("leftTimerSeconds") as! Double, backgroundTime: backgroundTime)
-                store.removeObjectForKey("leftTimerSeconds")
-            }
-            
-            if store.objectForKey("rightTimerSeconds") != nil {
-                resumeRightTimer(store.objectForKey("rightTimerSeconds") as! Double, backgroundTime: backgroundTime)
-                store.removeObjectForKey("rightTimerSeconds")
-            }
-
-            startTime = store.objectForKey("startTime") as? NSDate
-            
-            store.removeObjectForKey("startTime")
-            store.removeObjectForKey("background")
-            store.removeObjectForKey("leftIsTheLast")
-        }
-    }
-    
-    func resumeLeftTimer(seconds: Double, backgroundTime: NSDate) {
-        leftTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
-        leftTimerRunning = true
-    }
-    
-    func resumeRightTimer(seconds: Double, backgroundTime: NSDate) {
-        rightTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
-        rightTimerRunning = true
-    }
-    
-    func applicationWillResignActive() {
-        if isRunning {
-            store.setObject(true, forKey: "background")
-            store.setObject(NSDate(), forKey: "backgroundTime")
-            store.setObject(startTime, forKey: "startTime")
-            store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
-            
-            if leftTimerRunning {
-                leftTimerRunning = false
-                store.setObject(leftTimerSeconds, forKey: "leftTimerSeconds")
-            }
-            
-            if rightTimerRunning {
-                rightTimerRunning = false
-                store.setObject(rightTimerSeconds, forKey: "rightTimerSeconds")
-            }
-        }
-    }
-    
-    
-    // MARK: Actions
+    // MARK: IBActions
     
     @IBAction func leftTimerToggle(sender: UITapGestureRecognizer) {
-        leftTimerRunning = !leftTimerRunning
+        timerManager.leftTimerRunning = !timerManager.leftTimerRunning
+        leftPlay.highlighted = timerManager.leftTimerRunning
     }
     
     @IBAction func rightTimerToggle(sender: UITapGestureRecognizer) {
-        rightTimerRunning = !rightTimerRunning
+        timerManager.rightTimerRunning = !timerManager.rightTimerRunning
+        rightPlay.highlighted = timerManager.rightTimerRunning
     }
-    
-    
-    // MARK: Own Properties
-    
-    var startTime: NSDate? {
-        didSet {
-            store.setObject(startTime, forKey: "startTime")
-            store.synchronize()
-            
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-            startLabel.text = dateFormatter.stringFromDate(startTime!)
-        }
-    }
-    
-    var isRunning = false {
-        didSet {
-            if isRunning {
-                startTime = NSDate()
-            }
-        }
-    }
-    
-    
-    
-    // MARK : Stopwatch
-    
-    // left
-    var leftTimerObject = NSTimer()
-    var leftTimerSeconds = 0.0
-    
-    var leftTimerRunning: Bool = false {
-        didSet {
-            if leftTimerRunning {
-                leftTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLeftTimer"), userInfo: nil, repeats: true)
-                leftIsTheLast = true
-                leftPlay.highlighted = true
-                if !isRunning {
-                    isRunning = true
-                }
-            } else {
-                leftTimerObject.invalidate()
-                leftPlay.highlighted = false
-            }
-        }
-    }
-    
-    func updateLeftTimer() {
-        leftTimerSeconds++
-        leftTimer.text = secondsDisplay(leftTimerSeconds)
-    }
-    
-    // right
-    var rightTimerObject = NSTimer()
-    var rightTimerSeconds = 0.0
-    
-    var rightTimerRunning: Bool = false {
-        didSet {
-            if rightTimerRunning {
-                rightTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateRightTimer"), userInfo: nil, repeats: true)
-                leftIsTheLast = false
-                rightPlay.highlighted = true
-                if !isRunning {
-                    isRunning = true
-                }
-            } else {
-                rightTimerObject.invalidate()
-                rightPlay.highlighted = false
-            }
-        }
-    }
-    
-    func updateRightTimer() {
-        rightTimerSeconds++
-        rightTimer.text = secondsDisplay(rightTimerSeconds)
-    }
-    
-    // reset
     
     @IBAction func reset(sender: UITapGestureRecognizer) {
-        if isRunning {
-            appendNewTimer ()
-        }
-        
-        isRunning = false
-        leftTimerRunning = false
-        leftTimer.text = "00:00"
-        leftTimerSeconds = 0.0
-        rightTimerRunning = false
-        rightTimer.text = "00:00"
-        rightTimerSeconds = 0.0
-        startLabel.text = "-- --"
+        timerManager.saveCurrentTimer()
         setLastTimer()
-
     }
     
+    //MARK: TimerMaganer Delegate Methods
+    
+    func updateLeftTimerLabel(text: String) {
+        leftTimer.text = text
+    }
+    
+    func updateRightTimerLabel(text: String) {
+        rightTimer.text = text
+    }
+    
+    func updateStartTimerLabel(text: String) {
+        startLabel.text = text
+    }
+    
+    func updateLeftAndRightIcon(update: Bool) {
+        leftIcon.highlighted = update
+        rightIcon.highlighted = !update
+    }
     
     // MARK: Helpers
     
-    var leftIsTheLast: Bool = false {
-        didSet {
-            if leftIsTheLast {
-                rightIcon.highlighted = false
-                leftIcon.highlighted = true
-            } else {
-                leftIcon.highlighted = false
-                rightIcon.highlighted = true
-            }
-        }
-    }
-    
-    func appendNewTimer () {
-        let newTimer = Timer()
-        newTimer.beginTime = startTime!
-        newTimer.leftTimer = leftTimerSeconds
-        newTimer.rightTimer = rightTimerSeconds
-        newTimer.leftIsTheLast = leftIsTheLast
-        
-        realm.write {
-            self.realm.add(newTimer)
-        }
-    }
-    
-    func secondsDisplay(seconds: Double) -> String {
-        let minutes = UInt8(seconds / 60.0)
-        let seconds = UInt8(seconds % 60.0)
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        return "\(strMinutes):\(strSeconds)"
-    }
-    
     func setLastTimer() {
-        let lastTimerObject = realm.objects(Timer).last
-        if lastTimerObject != nil {
+        if let lastTimerObject = timerManager.realm.objects(Timer).last {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH:mm"
-            lastTime.text = dateFormatter.stringFromDate(lastTimerObject!.beginTime)
-            
-            let nextTimeDateObject = lastTimerObject!.beginTime.dateByAddingTimeInterval(nextTimeDelay)
-            nextTime.text = dateFormatter.stringFromDate(nextTimeDateObject)
-            
-            lastTimeLeft.text = secondsDisplay(lastTimerObject!.leftTimer)
-            lastTimeRight.text = secondsDisplay(lastTimerObject!.rightTimer)
-            
-            if lastTimerObject!.leftIsTheLast {
-                leftImage.highlighted = true
-                rightImage.highlighted = false
-            } else {
-                leftImage.highlighted = false
-                rightImage.highlighted = true
-            }
+            lastTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime)
+            nextTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime.dateByAddingTimeInterval(nextTimeDelay))
+            lastTimeLeft.text = lastTimerObject.leftTimerSecondsString
+            lastTimeRight.text = lastTimerObject.rightTimerSecondsString
+            leftImage.highlighted = lastTimerObject.leftIsTheLast
+            rightImage.highlighted = !lastTimerObject.leftIsTheLast
+        } else {
+            leftTimer.text = "00:00"
+            rightTimer.text = "00:00"
+            startLabel.text = "-- --"
         }
     }
     
@@ -288,47 +116,44 @@ class HomeTableViewController: UITableViewController {
         return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
     }
     
-    
-    // MARK: Swipe Actions
+    // MARK: UITableViewDelegate Methods
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         let less1 = UITableViewRowAction(style: .Normal, title: "-1m") { action, index in
             if indexPath.row == 0 {
                 
-                if self.leftTimerSeconds < 61 {
-                    self.leftTimerSeconds = 0
+                if self.timerManager.timer.leftTimerSeconds < 61 {
+                    self.timerManager.timer.leftTimerSeconds = 0
                 } else {
-                    self.leftTimerSeconds -= 60
+                    self.timerManager.timer.leftTimerSeconds -= 60
                 }
                 
             } else if indexPath.row == 1 {
                 
-                if self.rightTimerSeconds < 61 {
-                    self.rightTimerSeconds = 0
+                if self.timerManager.timer.rightTimerSeconds < 61 {
+                    self.timerManager.timer.rightTimerSeconds = 0
                 } else {
-                    self.rightTimerSeconds -= 60
+                    self.timerManager.timer.rightTimerSeconds -= 60
                 }
                 
             }
         }
         
-        
         let more1 = UITableViewRowAction(style: .Normal, title: "+1m") { action, index in
             if indexPath.row == 0 {
-                self.leftTimerSeconds += 60
+                self.timerManager.timer.leftTimerSeconds += 60
             } else if indexPath.row == 1 {
-                self.rightTimerSeconds += 60
+                self.timerManager.timer.rightTimerSeconds += 60
             }
         }
         
         let startLess5 = UITableViewRowAction(style: .Normal, title: "-5m") { action, index in
-            self.startTime = self.startTime!.dateByAddingTimeInterval(-300)
+            self.timerManager.startTime = self.timerManager.startTime!.dateByAddingTimeInterval(-300)
         }
         
         let startMore5 = UITableViewRowAction(style: .Normal, title: "+5m") { action, index in
-            self.startTime = self.startTime!.dateByAddingTimeInterval(300)
+            self.timerManager.startTime = self.timerManager.startTime!.dateByAddingTimeInterval(300)
         }
-
         
         less1.backgroundColor = UIColorFromRGB("FC3158")
         more1.backgroundColor = UIColor.lightGrayColor()
@@ -344,7 +169,7 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // the cells you would like the actions to appear needs to be editable
-        if isRunning && (indexPath.section == 1 || indexPath.section == 2) {
+        if timerManager.isRunning && (indexPath.section == 1 || indexPath.section == 2) {
             return true
         } else {
             return false

@@ -11,7 +11,7 @@ import RealmSwift
 
 class AllTableViewController: UITableViewController {
     
-    let completedTimers = Realm().objects(Timer).sorted("beginTime", ascending: false)
+    let completedTimers = Realm().objects(Timer).sorted("startTime", ascending: false)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +32,10 @@ class AllTableViewController: UITableViewController {
             as! AllTableViewCell
         
         let timer = completedTimers[indexPath.row]
-        cell.date.text = dateDisplay(timer.beginTime)
-        cell.dateSmall.text = dateDisplay2(timer.beginTime)
-        cell.left.text = secondsDisplay(timer.leftTimer)
-        cell.right.text = secondsDisplay(timer.rightTimer)
+        cell.date.text = dateDisplay(timer.startTime)
+        cell.dateSmall.text = dateDisplay2(timer.startTime)
+        cell.left.text = timer.leftTimerSecondsString
+        cell.right.text = timer.rightTimerSecondsString
         
         if timer.leftIsTheLast {
             cell.leftImage.highlighted = true
@@ -44,14 +44,6 @@ class AllTableViewController: UITableViewController {
         }
         
         return cell
-    }
-    
-    func secondsDisplay(seconds: Double) -> String {
-        let minutes = UInt8(seconds / 60.0)
-        let seconds = UInt8(seconds % 60.0)
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        return "\(strMinutes):\(strSeconds)"
     }
     
     func dateDisplay (date: NSDate) -> String {
