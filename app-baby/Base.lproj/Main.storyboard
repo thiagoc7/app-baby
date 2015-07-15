@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kh7-FU-VNw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kh7-FU-VNw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -167,17 +167,19 @@
                 <tapGestureRecognizer id="7LJ-g8-hL0" userLabel="Next Timer Tap">
                     <connections>
                         <action selector="nextTimer:" destination="cTH-5X-n4b" id="Uly-sX-2Ue"/>
+                        <segue destination="Sl9-nt-25Y" kind="presentation" identifier="nextTimer" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="tbH-GD-lot"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bkF-Nk-Rtv" userLabel="Each Breast Tap">
                     <connections>
                         <action selector="eachBreast:" destination="cTH-5X-n4b" id="TBM-dh-byC"/>
+                        <segue destination="Sl9-nt-25Y" kind="presentation" identifier="eachBreast" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="kC0-Fj-wmb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bDZ-Jp-BDx" userLabel="Total Time Tap">
                     <connections>
                         <action selector="totalTime:" destination="cTH-5X-n4b" id="Uy5-q6-MpX"/>
-                        <segue destination="Sl9-nt-25Y" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="CGt-Kc-ddD"/>
+                        <segue destination="Sl9-nt-25Y" kind="presentation" identifier="totalTime" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="CGt-Kc-ddD"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -219,9 +221,13 @@
                                             <segment title="20 min"/>
                                         </segments>
                                         <color key="tintColor" red="0.98823529409999999" green="0.19215686269999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="Sl9-nt-25Y" eventType="valueChanged" id="3dK-8c-uhf"/>
+                                        </connections>
                                     </segmentedControl>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="15" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-hU-aAE">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-hU-aAE">
                                         <rect key="frame" x="0.0" y="36" width="280" height="216"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.98823529409999999" green="0.19215686269999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="216" id="5Zr-XP-GjF"/>
@@ -229,6 +235,9 @@
                                         <date key="date" timeIntervalSinceReferenceDate="458599003.79848498">
                                             <!--2015-07-14 20:36:43 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="pickerChanged:" destination="Sl9-nt-25Y" eventType="valueChanged" id="Ifd-tZ-YAO"/>
+                                        </connections>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80z-iy-bcJ">
                                         <rect key="frame" x="0.0" y="252" width="280" height="40"/>
@@ -239,6 +248,9 @@
                                             <color key="titleColor" red="0.5568627451" green="0.5568627451" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButton:" destination="Sl9-nt-25Y" eventType="touchUpInside" id="mJc-Pk-nSU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-fZ-517">
                                         <rect key="frame" x="0.0" y="292" width="280" height="40"/>
@@ -249,6 +261,9 @@
                                             <color key="titleColor" red="0.98823529409999999" green="0.19215686269999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="noReminderButton:" destination="Sl9-nt-25Y" eventType="touchUpInside" id="Lb0-Fh-TfN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -281,6 +296,10 @@
                             <constraint firstAttribute="trailing" secondItem="o0i-nx-2cn" secondAttribute="trailing" id="ueV-0l-N8a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="MqL-hU-aAE" id="QyK-QD-wbJ"/>
+                        <outlet property="segment" destination="JGb-jq-aCl" id="dj8-5U-yoV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fv-7S-yUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="L8W-tV-IIG" userLabel="Background Tap">
@@ -788,4 +807,7 @@
         <image name="s_icon_right" width="38" height="38"/>
         <image name="s_icon_right_color" width="38" height="38"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tbH-GD-lot"/>
+    </inferredMetricsTieBreakers>
 </document>

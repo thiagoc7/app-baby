@@ -10,44 +10,65 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     
-    // MARK: Outlets
+    // MARK: Outlets ans vars
     
     @IBOutlet weak var nextTimerInLabel: UILabel!
     @IBOutlet weak var reminderForEachLabel: UILabel!
     @IBOutlet weak var reminderForTotalLabel: UILabel!
     
+    var nextTimerIn: Double = 10800.0 {
+        didSet {
+            nextTimerInLabel.text = "new time"
+        }
+    }
     
-    // MARK: Init
-    
-    @IBAction func done(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    var eachBreastReminder: Double = 900.0 {
+        didSet {
+            let newMinutes = eachBreastReminder / 60
+            reminderForEachLabel.text = "\(newMinutes) min"
+        }
+    }
+
+    var totalTimeReminder: Double = 1800.0 {
+        didSet {
+            let newMinutes = totalTimeReminder / 60
+            reminderForTotalLabel.text = "\(newMinutes) min"
+        }
     }
 
     
-    // MARK: Alerts
     
-    // var alertController: UIAlertController?
+    let store = NSUserDefaults.standardUserDefaults()
+    
+    
+    // MARK: Init
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if store.objectForKey("nextTimerIn") != nil {
+            nextTimerIn = store.objectForKey("totalTimeReminder") as! Double
+        }
+        
+        if store.objectForKey("eachBreastReminder") != nil {
+            eachBreastReminder = store.objectForKey("totalTimeReminder") as! Double
+        }
+        
+        if store.objectForKey("totalTimeReminder") != nil {
+            totalTimeReminder = store.objectForKey("totalTimeReminder") as! Double
+        }
+
+    }
     
     
     // MARK: UI Actions
     
+    @IBAction func done(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func nextTimer(sender: UITapGestureRecognizer) {
-        let controller = UIAlertController(title: "Reminde me in", message:nil, preferredStyle: .ActionSheet)
-        
-        let set5min = UIAlertAction(title: "5 min", style: .Default, handler: nil)
-        let set10min = UIAlertAction(title: "10 min", style: .Default, handler: nil)
-        
-        let setNoReminde = UIAlertAction(title: "None", style: .Default, handler: nil)
-        let setCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        
-        controller.addAction(set5min)
-        controller.addAction(set10min)
-        controller.addAction(setNoReminde)
-        controller.addAction(setCancel)
-        
-        controller.view.tintColor = UIColor.lightGrayColor()
 
-        presentViewController(controller, animated: true, completion: nil)
     }
     
     @IBAction func nextTimerAlarmSwitch(sender: UISwitch) {
@@ -59,6 +80,23 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func totalTime(sender: UITapGestureRecognizer) {
+    }
+    
+    
+    // MARK: Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let toView = segue.destinationViewController as! PickerViewController
+        
+        if segue.identifier == "totalTime" {
+            toView.seconds = totalTimeReminder
+        } else if segue.identifier == "eachBreast" {
+            toView.seconds = eachBreastReminder
+        } else if segue.identifier == "nextTimer" {
+            toView.seconds = nextTimerIn
+            toView.segmentTitles = ["2:00 hs", "2:30 hs", "3:00 hs", "4:00 hs"]
+            toView.segmentOptions = [7200, 9000, 10800, 14400]
+        }
     }
     
 }

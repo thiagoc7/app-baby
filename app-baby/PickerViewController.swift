@@ -9,30 +9,50 @@
 import UIKit
 
 class PickerViewController: UIViewController {
-
-    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+    
+    // MARK: Outlets and vars
+    
+    @IBOutlet weak var picker: UIDatePicker!
+    @IBOutlet weak var segment: UISegmentedControl!
+    
+    var seconds: Double! = 0.0
+    
+    var segmentOptions: [Double] = [600, 900, 1200, 1500]
+    var segmentTitles = ["10 min", "15 min", "20 min", "25 min"]
+    
+    
+    // MARK: Init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        picker.countDownDuration = seconds
+        
+        for (index, title) in enumerate(segmentTitles) {
+            segment.setTitle(title, forSegmentAtIndex: index)
+        }
     }
     
+    
+    // MARK: Actions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func pickerChanged(sender: UIDatePicker) {
+        seconds = picker.countDownDuration
+        print(seconds)
     }
-    */
-
+    
+    @IBAction func segmentChanged(sender: UISegmentedControl) {
+        let controlIndex = sender.selectedSegmentIndex
+        picker.countDownDuration = segmentOptions[controlIndex]
+    }
+    
+    @IBAction func setButton(sender: UIButton) {
+    }
+    
+    @IBAction func noReminderButton(sender: UIButton) {
+    }
+    
+    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
