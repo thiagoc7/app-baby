@@ -164,6 +164,7 @@ class TimerManager: NSObject {
                 rightTimerRunning = false
                 store.setObject(timer.rightTimerSeconds, forKey: "rightTimerSeconds")
             }
+            store.synchronize()
         }
     }
 
