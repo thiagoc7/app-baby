@@ -29,21 +29,17 @@ class TimerManager: NSObject {
     
     // MARK: Properties Observers
     
-    var startTime: NSDate? {
-        didSet {
-            store.setObject(startTime, forKey: "startTime")
-            store.synchronize()
-            
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-            delegate?.updateStartTimerLabel(dateFormatter.stringFromDate(startTime!))
-        }
-    }
-    
     var isRunning = false {
         didSet {
             if isRunning {
-                startTime = NSDate()
+                timer.startTime = NSDate()
+                
+                store.setObject(timer.startTime, forKey: "startTime")
+                store.synchronize()
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "HH:mm"
+                delegate?.updateStartTimerLabel(dateFormatter.stringFromDate(timer.startTime))
             }
         }
     }
@@ -52,7 +48,8 @@ class TimerManager: NSObject {
         didSet {
             if leftTimerRunning {
                 leftTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLeftTimer"), userInfo: nil, repeats: true)
-                leftIsTheLast = true
+                timer.leftIsTheLast = true
+                delegate?.updateLeftAndRightIcon(timer.leftIsTheLast)
                 if !isRunning {
                     isRunning = true
                 }
@@ -66,7 +63,8 @@ class TimerManager: NSObject {
         didSet {
             if rightTimerRunning {
                 rightTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateRightTimer"), userInfo: nil, repeats: true)
-                leftIsTheLast = false
+                timer.leftIsTheLast = false
+                delegate?.updateLeftAndRightIcon(timer.leftIsTheLast)
                 if !isRunning {
                     isRunning = true
                 }
@@ -76,27 +74,17 @@ class TimerManager: NSObject {
         }
     }
     
-    var leftIsTheLast: Bool = false {
-        didSet {
-            delegate?.updateLeftAndRightIcon(leftIsTheLast)
-        }
-    }
-    
     // MARK: Methods
     
     func saveCurrentTimer () {
         if isRunning {
-            timer.startTime = startTime!
-            timer.leftIsTheLast = leftIsTheLast
-            
             realm.write {
                 self.realm.add(self.timer)
+                self.timer = Timer()
             }
-            
             isRunning = false
             leftTimerRunning = false
             rightTimerRunning = false
-            timer = Timer();
         }
     }
     
@@ -126,7 +114,7 @@ class TimerManager: NSObject {
         }
         
         if store.objectForKey("leftIsTheLast") != nil {
-            leftIsTheLast = store.objectForKey("leftIsTheLast") as! Bool
+            timer.leftIsTheLast = store.objectForKey("leftIsTheLast") as! Bool
         }
         
         if store.objectForKey("background") != nil {
@@ -142,7 +130,7 @@ class TimerManager: NSObject {
                 store.removeObjectForKey("rightTimerSeconds")
             }
             
-            startTime = store.objectForKey("startTime") as? NSDate
+            timer.startTime = store.objectForKey("startTime") as! NSDate
             
             store.removeObjectForKey("startTime")
             store.removeObjectForKey("background")
@@ -154,7 +142,7 @@ class TimerManager: NSObject {
         if isRunning {
             store.setObject(true, forKey: "background")
             store.setObject(NSDate(), forKey: "backgroundTime")
-            store.setObject(startTime, forKey: "startTime")
+            store.setObject(timer.startTime, forKey: "startTime")
             store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
             
             if leftTimerRunning {

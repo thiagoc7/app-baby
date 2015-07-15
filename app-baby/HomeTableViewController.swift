@@ -96,10 +96,11 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
             lastTimeRight.text = lastTimerObject.rightTimerSecondsString
             leftImage.highlighted = lastTimerObject.leftIsTheLast
             rightImage.highlighted = !lastTimerObject.leftIsTheLast
-        } else {
             leftTimer.text = "00:00"
             rightTimer.text = "00:00"
             startLabel.text = "-- --"
+            leftPlay.highlighted = timerManager.leftTimerRunning
+            rightPlay.highlighted = timerManager.rightTimerRunning
         }
     }
     
@@ -148,11 +149,11 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
         }
         
         let startLess5 = UITableViewRowAction(style: .Normal, title: "-5m") { action, index in
-            self.timerManager.startTime = self.timerManager.startTime!.dateByAddingTimeInterval(-300)
+            self.timerManager.timer.startTime = self.timerManager.timer.startTime.dateByAddingTimeInterval(-300)
         }
         
         let startMore5 = UITableViewRowAction(style: .Normal, title: "+5m") { action, index in
-            self.timerManager.startTime = self.timerManager.startTime!.dateByAddingTimeInterval(300)
+            self.timerManager.timer.startTime = self.timerManager.timer.startTime.dateByAddingTimeInterval(300)
         }
         
         less1.backgroundColor = UIColorFromRGB("FC3158")
