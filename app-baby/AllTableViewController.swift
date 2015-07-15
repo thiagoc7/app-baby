@@ -13,10 +13,6 @@ class AllTableViewController: UITableViewController {
     
     let completedTimers = Realm().objects(Timer).sorted("startTime", ascending: false)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -26,36 +22,15 @@ class AllTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =
-        self.tableView.dequeueReusableCellWithIdentifier(
-            "timerCell", forIndexPath: indexPath)
-            as! AllTableViewCell
-        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier( "timerCell", forIndexPath: indexPath) as! AllTableViewCell
         let timer = completedTimers[indexPath.row]
-        cell.date.text = dateDisplay(timer.startTime)
-        cell.dateSmall.text = dateDisplay2(timer.startTime)
+        cell.date.text = timer.startTimeHourString
+        cell.dateSmall.text = timer.startTimeDateString
         cell.left.text = timer.leftTimerSecondsString
         cell.right.text = timer.rightTimerSecondsString
-        
-        if timer.leftIsTheLast {
-            cell.leftImage.highlighted = true
-        } else {
-            cell.rightImage.highlighted = true
-        }
-        
+        cell.leftImage.highlighted = timer.leftIsTheLast
+        cell.rightImage.highlighted = !timer.leftIsTheLast
         return cell
-    }
-    
-    func dateDisplay (date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        return dateFormatter.stringFromDate(date)
-    }
-    
-    func dateDisplay2 (date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "d/M"
-        return dateFormatter.stringFromDate(date)
     }
 
     /*
@@ -70,7 +45,6 @@ class AllTableViewController: UITableViewController {
         return true
     }
 
-    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {

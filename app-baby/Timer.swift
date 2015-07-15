@@ -24,18 +24,38 @@ class Timer: Object {
     }
     
     var leftTimerSecondsString: String {
-        return secondsDisplay(leftTimerSeconds)
+        return secondsString(leftTimerSeconds)
     }
     
     var rightTimerSecondsString: String {
-        return secondsDisplay(rightTimerSeconds)
+        return secondsString(rightTimerSeconds)
     }
     
-    func secondsDisplay(seconds: Double) -> String {
+    var startTimeDateString: String {
+        return dateString(startTime)
+    }
+    
+    var startTimeHourString: String {
+        return hourString(startTime)
+    }
+    
+    func secondsString (seconds: Double) -> String {
         let minutes = UInt8(seconds / 60.0)
         let seconds = UInt8(seconds % 60.0)
         let strMinutes = String(format: "%02d", minutes)
         let strSeconds = String(format: "%02d", seconds)
         return "\(strMinutes):\(strSeconds)"
+    }
+    
+    func hourString (date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.stringFromDate(date)
+    }
+    
+    func dateString (date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "d/M"
+        return dateFormatter.stringFromDate(date)
     }
 }
