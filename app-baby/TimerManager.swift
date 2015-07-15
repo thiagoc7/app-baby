@@ -100,47 +100,57 @@ class TimerManager: NSObject {
     
     func resumeLeftTimer(seconds: Double, backgroundTime: NSDate) {
         timer.leftTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
+        delegate?.updateLeftTimerLabel(timer.leftTimerSecondsString)
         leftTimerRunning = true
     }
     
     func resumeRightTimer(seconds: Double, backgroundTime: NSDate) {
         timer.rightTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
+        delegate?.updateRightTimerLabel(timer.rightTimerSecondsString)
         rightTimerRunning = true
     }
     
     func applicationDidBecomeActive() {
-        if store.objectForKey("nextTimeDelay") != nil {
-            nextTimeDelay = store.objectForKey("nextTimeDelay") as! Double
-        }
-        
-        if store.objectForKey("leftIsTheLast") != nil {
-            timer.leftIsTheLast = store.objectForKey("leftIsTheLast") as! Bool
-        }
-        
-        if store.objectForKey("background") != nil {
-            let backgroundTime = store.objectForKey("backgroundTime") as! NSDate
+        if let background  = store.objectForKey("background") as? Bool  {
             
-            if store.objectForKey("leftTimerSeconds") != nil {
-                resumeLeftTimer(store.objectForKey("leftTimerSeconds") as! Double, backgroundTime: backgroundTime)
-                store.removeObjectForKey("leftTimerSeconds")
+            if let _nextTimeDelay = store.objectForKey("nextTimeDelay") as? Double {
+                nextTimeDelay = _nextTimeDelay
+                store.removeObjectForKey("nextTimeDelay")
             }
             
-            if store.objectForKey("rightTimerSeconds") != nil {
-                resumeRightTimer(store.objectForKey("rightTimerSeconds") as! Double, backgroundTime: backgroundTime)
-                store.removeObjectForKey("rightTimerSeconds")
+            if let leftIsTheLast = store.objectForKey("leftIsTheLast") as? Bool {
+                timer.leftIsTheLast = leftIsTheLast
+                store.removeObjectForKey("leftIsTheLast")
             }
             
-            timer.startTime = store.objectForKey("startTime") as! NSDate
+            if let backgroundTime = store.objectForKey("backgroundTime") as? NSDate {
+                
+                if let leftTimerSeconds = store.objectForKey("leftTimerSeconds") as? Double {
+                    resumeLeftTimer(leftTimerSeconds, backgroundTime: backgroundTime)
+                    store.removeObjectForKey("leftTimerSeconds")
+                }
+                
+                if let rightTimerSeconds = store.objectForKey("rightTimerSeconds") as? Double {
+                    resumeRightTimer(rightTimerSeconds, backgroundTime: backgroundTime)
+                    store.removeObjectForKey("rightTimerSeconds")
+                }
+                
+                if let startTime = store.objectForKey("startTime") as? NSDate {
+                    timer.startTime = startTime
+                    store.removeObjectForKey("startTime")
+                }
+                
+                store.removeObjectForKey("backgroundTime")
+            }
             
-            store.removeObjectForKey("startTime")
             store.removeObjectForKey("background")
-            store.removeObjectForKey("leftIsTheLast")
         }
     }
     
     func applicationWillResignActive() {
         if isRunning {
             store.setObject(true, forKey: "background")
+            store.setObject(timer.leftIsTheLast, forKey: "leftIsTheLast")
             store.setObject(NSDate(), forKey: "backgroundTime")
             store.setObject(timer.startTime, forKey: "startTime")
             store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
@@ -157,5 +167,4 @@ class TimerManager: NSObject {
         }
     }
 
-   
 }
