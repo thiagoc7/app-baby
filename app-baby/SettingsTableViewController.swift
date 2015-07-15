@@ -16,7 +16,7 @@ class SettingsTableViewController: UITableViewController, PickerViewControllerDe
     @IBOutlet weak var reminderForEachLabel: UILabel!
     @IBOutlet weak var reminderForTotalLabel: UILabel!
     
-    var settings = SettingsManager()
+    let settings = SettingsManager()
     
     var identifier = String()
     

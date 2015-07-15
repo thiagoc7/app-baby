@@ -113,11 +113,6 @@ class TimerManager: NSObject {
     func applicationDidBecomeActive() {
         if let background  = store.objectForKey("background") as? Bool  {
             
-            if let _nextTimeDelay = store.objectForKey("nextTimeDelay") as? Double {
-                nextTimeDelay = _nextTimeDelay
-                store.removeObjectForKey("nextTimeDelay")
-            }
-            
             if let leftIsTheLast = store.objectForKey("leftIsTheLast") as? Bool {
                 timer.leftIsTheLast = leftIsTheLast
                 store.removeObjectForKey("leftIsTheLast")
@@ -153,7 +148,6 @@ class TimerManager: NSObject {
             store.setObject(timer.leftIsTheLast, forKey: "leftIsTheLast")
             store.setObject(NSDate(), forKey: "backgroundTime")
             store.setObject(timer.startTime, forKey: "startTime")
-            store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
             
             if leftTimerRunning {
                 leftTimerRunning = false

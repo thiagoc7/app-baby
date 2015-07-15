@@ -9,8 +9,6 @@
 import UIKit
 import RealmSwift
 
-var nextTimeDelay: Double = 10800
-
 class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     
     // MARK: Outlets
@@ -19,6 +17,7 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     @IBOutlet weak var lastTimeLeft: UILabel!
     @IBOutlet weak var lastTimeRight: UILabel!
     @IBOutlet weak var nextTime: UILabel!
+    @IBOutlet weak var nextTimeDelayLabel: UILabel!
     @IBOutlet weak var leftTimer: UILabel!
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightTimer: UILabel!
@@ -33,7 +32,7 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     @IBOutlet weak var rightPlay: UIImageView!
     
     let timerManager = TimerManager()
-    
+    var settings = SettingsManager()
     // MARK: Init
     
     override func viewDidLoad() {
@@ -46,6 +45,9 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         setLastTimer()
+        
+        settings = SettingsManager()
+        nextTimeDelayLabel.text = "In " + settings.nextTimerInString
     }
     
     // MARK: IBActions
@@ -91,7 +93,7 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH:mm"
             lastTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime)
-            nextTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime.dateByAddingTimeInterval(nextTimeDelay))
+            nextTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime.dateByAddingTimeInterval(settings.nextTimerIn))
             lastTimeLeft.text = lastTimerObject.leftTimerSecondsString
             lastTimeRight.text = lastTimerObject.rightTimerSecondsString
             leftImage.highlighted = lastTimerObject.leftIsTheLast
