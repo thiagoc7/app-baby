@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol PickerViewControllerDelegate {
+    func updateSeconds(seconds: Double)
+}
+
 class PickerViewController: UIViewController {
     
     // MARK: Outlets and vars
     
     @IBOutlet weak var picker: UIDatePicker!
     @IBOutlet weak var segment: UISegmentedControl!
+    
+    var delegate:PickerViewControllerDelegate!
     
     var seconds: Double! = 0.0
     
@@ -33,12 +39,10 @@ class PickerViewController: UIViewController {
         }
     }
     
-    
     // MARK: Actions
 
     @IBAction func pickerChanged(sender: UIDatePicker) {
-        seconds = picker.countDownDuration
-        print(seconds)
+        segment.selectedSegmentIndex = -1
     }
     
     @IBAction func segmentChanged(sender: UISegmentedControl) {
@@ -47,9 +51,12 @@ class PickerViewController: UIViewController {
     }
     
     @IBAction func setButton(sender: UIButton) {
+        delegate?.updateSeconds(picker.countDownDuration)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func noReminderButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
