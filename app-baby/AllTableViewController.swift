@@ -11,11 +11,7 @@ import RealmSwift
 
 class AllTableViewController: UITableViewController {
     
-    let completedTimers = Realm().objects(Timer).sorted("beginTime", ascending: false)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    let completedTimers = Realm().objects(Timer).sorted("startTime", ascending: false)
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -26,60 +22,22 @@ class AllTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =
-        self.tableView.dequeueReusableCellWithIdentifier(
-            "timerCell", forIndexPath: indexPath)
-            as! AllTableViewCell
-        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("timerCell", forIndexPath: indexPath) as! AllTableViewCell
         let timer = completedTimers[indexPath.row]
-        cell.date.text = dateDisplay(timer.beginTime)
-        cell.dateSmall.text = dateDisplay2(timer.beginTime)
-        cell.left.text = secondsDisplay(timer.leftTimer)
-        cell.right.text = secondsDisplay(timer.rightTimer)
         
-        if timer.leftIsTheLast {
-            cell.leftImage.highlighted = true
-        } else {
-            cell.rightImage.highlighted = true
-        }
-        
+        cell.date.text = timer.startTimeHourString
+        cell.dateSmall.text = timer.startTimeDateString
+        cell.left.text = timer.leftTimerSecondsString
+        cell.right.text = timer.rightTimerSecondsString
+        cell.leftImage.highlighted = timer.leftIsTheLast
+        cell.rightImage.highlighted = !timer.leftIsTheLast
         return cell
     }
     
-    func secondsDisplay(seconds: Double) -> String {
-        let minutes = UInt8(seconds / 60.0)
-        let seconds = UInt8(seconds % 60.0)
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        return "\(strMinutes):\(strSeconds)"
-    }
-    
-    func dateDisplay (date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        return dateFormatter.stringFromDate(date)
-    }
-    
-    func dateDisplay2 (date: NSDate) -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "d/M"
-        return dateFormatter.stringFromDate(date)
-    }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
 
-    
-    // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let realm = Realm()

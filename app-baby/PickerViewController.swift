@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol PickerViewControllerDelegate {
+    func updateSeconds(seconds: Double)
+}
+
 class PickerViewController: UIViewController {
     
     // MARK: Outlets and vars
     
     @IBOutlet weak var picker: UIDatePicker!
     @IBOutlet weak var segment: UISegmentedControl!
+    
+    var delegate: PickerViewControllerDelegate!
     
     var seconds: Double! = 0.0
     var senderTimer: String! = ""
@@ -47,25 +53,24 @@ class PickerViewController: UIViewController {
     
     
     // MARK: Actions
-    @IBAction func setButton(sender: UIButton) {
-        seconds = picker.countDownDuration
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    @IBAction func noReminderButton(sender: UIButton) {
-        seconds = 0.0
-        dismissViewControllerAnimated(true, completion: nil)
-    }
     
     @IBAction func pickerChanged(sender: UIDatePicker) {
-        seconds = picker.countDownDuration
+        segment.selectedSegmentIndex = -1
     }
     
     @IBAction func segmentChanged(sender: UISegmentedControl) {
         let controlIndex = sender.selectedSegmentIndex
-        let duration = segmentOptions[controlIndex]
-        picker.setDate(setDateFromSeconds(duration), animated: true)
-        seconds = duration
+        picker.setDate(setDateFromSeconds(segmentOptions[controlIndex]), animated: true)
+    }
+    
+    @IBAction func setButton(sender: UIButton) {
+        delegate?.updateSeconds(picker.countDownDuration)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func noReminderButton(sender: UIButton) {
+        delegate?.updateSeconds(0.0)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
