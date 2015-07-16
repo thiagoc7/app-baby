@@ -19,6 +19,7 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet weak var lastTimeLeft: UILabel!
     @IBOutlet weak var lastTimeRight: UILabel!
     @IBOutlet weak var nextTime: UILabel!
+    @IBOutlet weak var nextTimeText: UILabel!
     @IBOutlet weak var leftTimer: UILabel!
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightTimer: UILabel!
@@ -53,10 +54,6 @@ class HomeTableViewController: UITableViewController {
     let store = NSUserDefaults.standardUserDefaults()
     
     func applicationDidBecomeActive() {
-        if store.objectForKey("nextTimeDelay") != nil {
-            nextTimeDelay = store.objectForKey("nextTimeDelay") as! Double
-        }
-        
         if store.objectForKey("leftIsTheLast") != nil {
             leftIsTheLast = store.objectForKey("leftIsTheLast") as! Bool
         }
@@ -97,7 +94,6 @@ class HomeTableViewController: UITableViewController {
             store.setObject(true, forKey: "background")
             store.setObject(NSDate(), forKey: "backgroundTime")
             store.setObject(startTime, forKey: "startTime")
-            store.setObject(nextTimeDelay, forKey: "nextTimeDelay")
             
             if leftTimerRunning {
                 leftTimerRunning = false
@@ -252,7 +248,17 @@ class HomeTableViewController: UITableViewController {
         return "\(strMinutes):\(strSeconds)"
     }
     
+    var updateNextTimerObject = NSTimer()
+    func updateNextTimerText() {
+        let helperText 
+    }
+    
     func setLastTimer() {
+        
+        if store.objectForKey("nextTimeDelay") != nil {
+            nextTimeDelay = store.objectForKey("nextTimeDelay") as! Double
+        }
+        
         let lastTimerObject = realm.objects(Timer).last
         if lastTimerObject != nil {
             let dateFormatter = NSDateFormatter()

@@ -16,6 +16,7 @@ class PickerViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     
     var seconds: Double! = 0.0
+    var senderTimer: String! = ""
     
     var segmentOptions: [Double] = [600, 900, 1200, 1500]
     var segmentTitles = ["10 min", "15 min", "20 min", "25 min"]
@@ -26,30 +27,45 @@ class PickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        picker.countDownDuration = seconds
+        picker.setDate(setDateFromSeconds(seconds), animated: true)
         
         for (index, title) in enumerate(segmentTitles) {
             segment.setTitle(title, forSegmentAtIndex: index)
         }
     }
     
+    func setDateFromSeconds(seconds: Double) -> (NSDate) {
+        let intSeconds = Int(seconds)
+        let minutes = (intSeconds / 60) % 60
+        let hours = intSeconds / 3600
+        let dateString = NSString(format: "%0.2d:%0.2d", hours, minutes)
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        return dateFormatter.dateFromString(dateString as String) as NSDate!
+    }
+    
     
     // MARK: Actions
+    @IBAction func setButton(sender: UIButton) {
+        seconds = picker.countDownDuration
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    @IBAction func noReminderButton(sender: UIButton) {
+        seconds = 0.0
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func pickerChanged(sender: UIDatePicker) {
         seconds = picker.countDownDuration
-        print(seconds)
     }
     
     @IBAction func segmentChanged(sender: UISegmentedControl) {
         let controlIndex = sender.selectedSegmentIndex
-        picker.countDownDuration = segmentOptions[controlIndex]
-    }
-    
-    @IBAction func setButton(sender: UIButton) {
-    }
-    
-    @IBAction func noReminderButton(sender: UIButton) {
+        let duration = segmentOptions[controlIndex]
+        picker.setDate(setDateFromSeconds(duration), animated: true)
+        seconds = duration
     }
     
     @IBAction func backgroundTap(sender: UITapGestureRecognizer) {

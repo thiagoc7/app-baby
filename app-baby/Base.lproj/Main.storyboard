@@ -166,19 +166,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iy8-6I-kXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="7LJ-g8-hL0" userLabel="Next Timer Tap">
                     <connections>
-                        <action selector="nextTimer:" destination="cTH-5X-n4b" id="Uly-sX-2Ue"/>
                         <segue destination="Sl9-nt-25Y" kind="presentation" identifier="nextTimer" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="tbH-GD-lot"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bkF-Nk-Rtv" userLabel="Each Breast Tap">
                     <connections>
-                        <action selector="eachBreast:" destination="cTH-5X-n4b" id="TBM-dh-byC"/>
                         <segue destination="Sl9-nt-25Y" kind="presentation" identifier="eachBreast" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="kC0-Fj-wmb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bDZ-Jp-BDx" userLabel="Total Time Tap">
                     <connections>
-                        <action selector="totalTime:" destination="cTH-5X-n4b" id="Uy5-q6-MpX"/>
                         <segue destination="Sl9-nt-25Y" kind="presentation" identifier="totalTime" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="CGt-Kc-ddD"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -249,7 +246,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="setButton:" destination="Sl9-nt-25Y" eventType="touchUpInside" id="mJc-Pk-nSU"/>
+                                            <action selector="setButton:" destination="Sl9-nt-25Y" eventType="touchUpInside" id="f0P-m9-tLv"/>
+                                            <segue destination="Gbg-o4-GGn" kind="unwind" unwindAction="unwindToPicker:" id="yRP-FD-JjQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-fZ-517">
@@ -262,7 +260,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="noReminderButton:" destination="Sl9-nt-25Y" eventType="touchUpInside" id="Lb0-Fh-TfN"/>
+                                            <action selector="noReminderButton:" destination="Sl9-nt-25Y" eventType="touchUpInside" id="yTL-yf-Caf"/>
+                                            <segue destination="Gbg-o4-GGn" kind="unwind" unwindAction="unwindToPicker:" id="ncY-rt-SJa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -302,6 +301,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fv-7S-yUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gbg-o4-GGn" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="L8W-tV-IIG" userLabel="Background Tap">
                     <connections>
                         <action selector="backgroundTap:" destination="Sl9-nt-25Y" id="Oqj-y3-qrN"/>
@@ -723,6 +723,7 @@
                         <outlet property="leftTableCell" destination="Aqg-Xl-2oE" id="yjp-me-4Pa"/>
                         <outlet property="leftTimer" destination="kjP-ub-DFJ" id="81b-bC-JtE"/>
                         <outlet property="nextTime" destination="NdH-mZ-zBo" id="vuU-3F-4ge"/>
+                        <outlet property="nextTimeText" destination="IEA-dr-Sbl" id="fNl-cj-cpL"/>
                         <outlet property="rightIcon" destination="vev-KH-6Wv" id="0ld-C4-hqh"/>
                         <outlet property="rightImage" destination="tcF-bA-5tf" id="g7f-Rx-e5F"/>
                         <outlet property="rightPlay" destination="B4R-B5-P5x" id="1vc-y6-xP3"/>

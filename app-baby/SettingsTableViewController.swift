@@ -18,21 +18,28 @@ class SettingsTableViewController: UITableViewController {
     
     var nextTimerIn: Double = 10800.0 {
         didSet {
-            nextTimerInLabel.text = "new time"
+            nextTimerInLabel.text = formatTime(nextTimerIn)
+            store.setObject(nextTimerIn, forKey: "nextTimeDelay")
         }
     }
     
     var eachBreastReminder: Double = 900.0 {
         didSet {
-            let newMinutes = eachBreastReminder / 60
-            reminderForEachLabel.text = "\(newMinutes) min"
+            if eachBreastReminder > 0.0 {
+                reminderForEachLabel.text = formatTime(eachBreastReminder)
+            } else {
+                reminderForEachLabel.text = "none"
+            }
         }
     }
 
     var totalTimeReminder: Double = 1800.0 {
         didSet {
-            let newMinutes = totalTimeReminder / 60
-            reminderForTotalLabel.text = "\(newMinutes) min"
+            if totalTimeReminder > 0.0 {
+                reminderForTotalLabel.text = formatTime(totalTimeReminder)
+            } else {
+                reminderForTotalLabel.text = "none"
+            }
         }
     }
 
@@ -46,12 +53,12 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if store.objectForKey("nextTimerIn") != nil {
-            nextTimerIn = store.objectForKey("totalTimeReminder") as! Double
+        if store.objectForKey("nextTimeDelay") != nil {
+            nextTimerIn = store.objectForKey("nextTimeDelay") as! Double
         }
         
         if store.objectForKey("eachBreastReminder") != nil {
-            eachBreastReminder = store.objectForKey("totalTimeReminder") as! Double
+            eachBreastReminder = store.objectForKey("eachBreastReminder") as! Double
         }
         
         if store.objectForKey("totalTimeReminder") != nil {
@@ -67,19 +74,18 @@ class SettingsTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func nextTimer(sender: UITapGestureRecognizer) {
-
-    }
-    
     @IBAction func nextTimerAlarmSwitch(sender: UISwitch) {
                 let switchStatus = sender.on
                 print(switchStatus)
     }
     
-    @IBAction func eachBreast(sender: UITapGestureRecognizer) {
-    }
     
-    @IBAction func totalTime(sender: UITapGestureRecognizer) {
+    //MARK: Helpers
+    
+    func formatTime(seconds: Double) -> (String) {
+        let formatter = NSDateComponentsFormatter()
+        formatter.unitsStyle = .Short
+        return formatter.stringFromTimeInterval(seconds)!
     }
     
     
@@ -87,6 +93,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let toView = segue.destinationViewController as! PickerViewController
+        toView.senderTimer = segue.identifier
         
         if segue.identifier == "totalTime" {
             toView.seconds = totalTimeReminder
@@ -96,6 +103,20 @@ class SettingsTableViewController: UITableViewController {
             toView.seconds = nextTimerIn
             toView.segmentTitles = ["2:00 hs", "2:30 hs", "3:00 hs", "4:00 hs"]
             toView.segmentOptions = [7200, 9000, 10800, 14400]
+        }
+    }
+    
+    @IBAction func unwindToPicker(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? PickerViewController {
+            let senderTimer = sourceViewController.senderTimer
+            let seconds = sourceViewController.seconds
+            if senderTimer == "nextTimer" {
+                nextTimerIn = seconds
+            } else if senderTimer == "eachBreast" {
+                eachBreastReminder = seconds
+            } else if senderTimer == "totalTime" {
+                totalTimeReminder = seconds
+            }
         }
     }
     
