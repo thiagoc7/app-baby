@@ -108,17 +108,11 @@
 		AF6F8C201B49C87F00A46D05 /* app-baby */ = {
 			isa = PBXGroup;
 			children = (
-				AF6F8C231B49C87F00A46D05 /* AppDelegate.swift */,
-				AF6F8C271B49C87F00A46D05 /* Main.storyboard */,
-				AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */,
-				AF6F8C2C1B49C87F00A46D05 /* LaunchScreen.xib */,
+				AF77A59C1B57C78E00C48B6E /* Models */,
+				AF77A59F1B57C7BA00C48B6E /* Controllers */,
+				AF77A59D1B57C79E00C48B6E /* Views */,
+				AF77A59E1B57C7AC00C48B6E /* Resources */,
 				AF6F8C211B49C87F00A46D05 /* Supporting Files */,
-				AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */,
-				AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */,
-				AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */,
-				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
-				AF399E451B553F8B0072580C /* SettingsTableViewController.swift */,
-				AF05DD151B55A07B00D17428 /* PickerViewController.swift */,
 			);
 			path = "app-baby";
 			sourceTree = "<group>";
@@ -146,6 +140,44 @@
 				AF6F8C381B49C87F00A46D05 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF77A59C1B57C78E00C48B6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8C231B49C87F00A46D05 /* AppDelegate.swift */,
+				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AF77A59D1B57C79E00C48B6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8C271B49C87F00A46D05 /* Main.storyboard */,
+				AF6F8C2C1B49C87F00A46D05 /* LaunchScreen.xib */,
+				AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AF77A59E1B57C7AC00C48B6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AF77A59F1B57C7BA00C48B6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */,
+				AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */,
+				AF399E451B553F8B0072580C /* SettingsTableViewController.swift */,
+				AF05DD151B55A07B00D17428 /* PickerViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		CBE3B35A649241EDAD94C102 /* Pods */ = {

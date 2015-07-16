@@ -248,10 +248,10 @@ class HomeTableViewController: UITableViewController {
         return "\(strMinutes):\(strSeconds)"
     }
     
-    var updateNextTimerObject = NSTimer()
-    func updateNextTimerText() {
-        let helperText 
-    }
+//    var updateNextTimerObject = NSTimer()
+//    func updateNextTimerText() {
+//        let helperText 
+//    }
     
     func setLastTimer() {
         
