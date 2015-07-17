@@ -61,7 +61,9 @@ class AlertsManager: NSObject {
     
     func setNextTimerReminder(date: NSDate) {
         deleteNextTimerReminder()
-        createNotification(date.dateByAddingTimeInterval(settings.nextTimerIn), body: nextReminderBodyText, identifier: nextReminderId)
+        if settings.nextTimerReminder {
+            createNotification(date.dateByAddingTimeInterval(settings.nextTimerIn), body: nextReminderBodyText, identifier: nextReminderId)
+        }
     }
     
     

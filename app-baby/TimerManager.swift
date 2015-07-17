@@ -68,7 +68,6 @@ class TimerManager: NSObject {
                 }
             } else {
                 leftTimerObject.invalidate()
-                delegate?.updateLeftTimerLabel("00:00")
             }
         }
     }
@@ -88,7 +87,6 @@ class TimerManager: NSObject {
                 
             } else {
                 rightTimerObject.invalidate()
-                delegate?.updateRightTimerLabel("00:00")
             }
         }
     }
@@ -121,6 +119,8 @@ class TimerManager: NSObject {
     func reset() {
         saveCurrentTimer()
         setInitialScreen()
+        delegate?.updateLeftTimerLabel("00:00")
+        delegate?.updateRightTimerLabel("00:00")
     }
     
     func setInitialScreen() {
