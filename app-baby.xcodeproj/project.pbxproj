@@ -21,6 +21,7 @@
 		AF6F8CE61B4BE6F500A46D05 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CE51B4BE6F500A46D05 /* Timer.swift */; };
 		AF77A5A11B57CB3E00C48B6E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77A5A01B57CB3E00C48B6E /* TimerManager.swift */; };
 		AF77A5A31B57CF0800C48B6E /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77A5A21B57CF0800C48B6E /* SettingsManager.swift */; };
+		AF77A5A51B57F30200C48B6E /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77A5A41B57F30200C48B6E /* AlertsManager.swift */; };
 		BCFEEF2A7DF7FA3884188748 /* Pods_app_babyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658E10AEAB95593308FEF8A6 /* Pods_app_babyTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		AF6F8CE51B4BE6F500A46D05 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		AF77A5A01B57CB3E00C48B6E /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		AF77A5A21B57CF0800C48B6E /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		AF77A5A41B57F30200C48B6E /* AlertsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
 		B375FF8190450F9745440115 /* Pods_app_baby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_baby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				AF6F8CE51B4BE6F500A46D05 /* Timer.swift */,
 				AF77A5A01B57CB3E00C48B6E /* TimerManager.swift */,
 				AF77A5A21B57CF0800C48B6E /* SettingsManager.swift */,
+				AF77A5A41B57F30200C48B6E /* AlertsManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				AF77A5A11B57CB3E00C48B6E /* TimerManager.swift in Sources */,
 				AF6F8CE61B4BE6F500A46D05 /* Timer.swift in Sources */,
 				AF399E461B553F8B0072580C /* SettingsTableViewController.swift in Sources */,
+				AF77A5A51B57F30200C48B6E /* AlertsManager.swift in Sources */,
 				AF6F8C441B49D37100A46D05 /* AllTableViewController.swift in Sources */,
 				AF6F8CDC1B4B1ADB00A46D05 /* AllTableViewCell.swift in Sources */,
 				AF05DD161B55A07B00D17428 /* PickerViewController.swift in Sources */,

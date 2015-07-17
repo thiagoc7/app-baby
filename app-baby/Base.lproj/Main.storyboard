@@ -159,6 +159,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nextTimerInLabel" destination="F2S-WD-fiM" id="tI2-QM-v6a"/>
+                        <outlet property="nextTimerSwitch" destination="ft6-yK-LXD" id="nhN-pV-FQ9"/>
                         <outlet property="reminderForEachLabel" destination="3FY-rC-3bc" id="ICF-0g-EdJ"/>
                         <outlet property="reminderForTotalLabel" destination="eyb-Qx-TdS" id="VJp-mh-nQb"/>
                     </connections>

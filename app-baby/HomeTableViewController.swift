@@ -32,42 +32,76 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     @IBOutlet weak var rightPlay: UIImageView!
     
     let timerManager = TimerManager()
+    let alerts = AlertsManager()
     var settings = SettingsManager()
     // MARK: Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         timerManager.delegate = self
+        
         NSNotificationCenter.defaultCenter().addObserver(timerManager, selector: "applicationWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(timerManager, selector: "applicationDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        setLastTimer()
-        
-        settings = SettingsManager()
-        nextTimeDelayLabel.text = "In " + settings.nextTimerInString
+        timerManager.setInitialScreen()
     }
+    
     
     // MARK: IBActions
     
     @IBAction func leftTimerToggle(sender: UITapGestureRecognizer) {
+        let previousState = timerManager.isRunning
         timerManager.leftTimerRunning = !timerManager.leftTimerRunning
         leftPlay.highlighted = timerManager.leftTimerRunning
+        
+        alerts.setLeftTimerReminder(timerManager.timer.leftTimerSeconds, isRunning: timerManager.leftTimerRunning)
+        if !previousState {
+            alerts.setTotalTimerReminder(timerManager.timer.startTime)
+            alerts.setNextTimerReminder(timerManager.timer.startTime)
+        }
     }
     
     @IBAction func rightTimerToggle(sender: UITapGestureRecognizer) {
+        let previousState = timerManager.isRunning
         timerManager.rightTimerRunning = !timerManager.rightTimerRunning
         rightPlay.highlighted = timerManager.rightTimerRunning
+        
+        alerts.setRightTimerReminder(timerManager.timer.rightTimerSeconds, isRunning: timerManager.rightTimerRunning)
+        if !previousState {
+            alerts.setTotalTimerReminder(timerManager.timer.startTime)
+            alerts.setNextTimerReminder(timerManager.timer.startTime)
+        }
     }
     
     @IBAction func reset(sender: UITapGestureRecognizer) {
-        timerManager.saveCurrentTimer()
-        setLastTimer()
+        timerManager.reset()
+        alerts.deleteLeftTimerReminder()
+        alerts.deleteRightTimerReminder()
+        alerts.deleteTotalTimerReminder()
     }
     
+    
     //MARK: TimerMaganer Delegate Methods
+
+    func updateLastTimeCell() {
+        if let lastTimerObject = timerManager.realm.objects(Timer).last {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            lastTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime)
+            lastTimeLeft.text = lastTimerObject.leftTimerSecondsString
+            lastTimeRight.text = lastTimerObject.rightTimerSecondsString
+            leftImage.highlighted = lastTimerObject.leftIsTheLast
+            rightImage.highlighted = !lastTimerObject.leftIsTheLast
+        }
+    }
+    
+    func updateNextTimeCell(displayTimer: Timer) {
+        nextTime.text = displayTimer.startTimeHourPlusSecondsString(settings.nextTimerIn)
+        nextTimeDelayLabel.text = displayTimer.startTimeHourHelperString(settings.nextTimerIn)
+    }
     
     func updateLeftTimerLabel(text: String) {
         leftTimer.text = text
@@ -86,24 +120,8 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
         rightIcon.highlighted = !update
     }
     
-    // MARK: Helpers
     
-    func setLastTimer() {
-        if let lastTimerObject = timerManager.realm.objects(Timer).last {
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-            lastTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime)
-            nextTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime.dateByAddingTimeInterval(settings.nextTimerIn))
-            lastTimeLeft.text = lastTimerObject.leftTimerSecondsString
-            lastTimeRight.text = lastTimerObject.rightTimerSecondsString
-            leftImage.highlighted = lastTimerObject.leftIsTheLast
-            rightImage.highlighted = !lastTimerObject.leftIsTheLast
-            leftTimer.text = "00:00"
-            rightTimer.text = "00:00"
-            leftPlay.highlighted = timerManager.leftTimerRunning
-            rightPlay.highlighted = timerManager.rightTimerRunning
-        }
-    }
+    // MARK: Helpers
     
     func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor {
         var scanner = NSScanner(string:colorCode)
@@ -126,16 +144,20 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
                 
                 if self.timerManager.timer.leftTimerSeconds < 61 {
                     self.timerManager.timer.leftTimerSeconds = 0
+                    self.alerts.setLeftTimerReminder(self.timerManager.timer.leftTimerSeconds, isRunning: self.timerManager.leftTimerRunning)
                 } else {
                     self.timerManager.timer.leftTimerSeconds -= 60
+                    self.alerts.setLeftTimerReminder(self.timerManager.timer.leftTimerSeconds, isRunning: self.timerManager.leftTimerRunning)
                 }
                 
             } else if indexPath.row == 1 {
                 
                 if self.timerManager.timer.rightTimerSeconds < 61 {
                     self.timerManager.timer.rightTimerSeconds = 0
+                    self.alerts.setRightTimerReminder(self.timerManager.timer.rightTimerSeconds, isRunning: self.timerManager.rightTimerRunning)
                 } else {
                     self.timerManager.timer.rightTimerSeconds -= 60
+                    self.alerts.setRightTimerReminder(self.timerManager.timer.rightTimerSeconds, isRunning: self.timerManager.rightTimerRunning)
                 }
                 
             }
@@ -144,17 +166,21 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
         let more1 = UITableViewRowAction(style: .Normal, title: "+1m") { action, index in
             if indexPath.row == 0 {
                 self.timerManager.timer.leftTimerSeconds += 60
+                self.alerts.setLeftTimerReminder(self.timerManager.timer.leftTimerSeconds, isRunning: self.timerManager.leftTimerRunning)
             } else if indexPath.row == 1 {
                 self.timerManager.timer.rightTimerSeconds += 60
+                self.alerts.setRightTimerReminder(self.timerManager.timer.rightTimerSeconds, isRunning: self.timerManager.rightTimerRunning)
             }
         }
         
         let startLess5 = UITableViewRowAction(style: .Normal, title: "-5m") { action, index in
             self.timerManager.timer.startTime = self.timerManager.timer.startTime.dateByAddingTimeInterval(-300)
+            self.alerts.setTotalTimerReminder(self.timerManager.timer.startTime)
         }
         
         let startMore5 = UITableViewRowAction(style: .Normal, title: "+5m") { action, index in
             self.timerManager.timer.startTime = self.timerManager.timer.startTime.dateByAddingTimeInterval(300)
+            self.alerts.setTotalTimerReminder(self.timerManager.timer.startTime)
         }
         
         less1.backgroundColor = UIColorFromRGB("FC3158")

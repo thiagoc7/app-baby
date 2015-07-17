@@ -31,6 +31,24 @@ class Timer: Object {
         return hourString(startTime)
     }
     
+    func startTimeHourPlusSecondsString(seconds: Double) -> String {
+        return hourString(startTime.dateByAddingTimeInterval(seconds))
+    }
+    
+    func startTimeHourHelperString(seconds: Double) -> String {
+        let nextDate = startTime.dateByAddingTimeInterval(seconds)
+        let interval = nextDate.timeIntervalSinceDate(NSDate())
+        
+        if interval > 0.0 {
+            let roundedInterval = round(interval / 60) * 60
+            let formatter = NSDateComponentsFormatter()
+            formatter.unitsStyle = .Short
+            return "in \(formatter.stringFromTimeInterval(roundedInterval)!)"
+        } else {
+            return "overdue"
+        }
+    }
+    
     func secondsString (seconds: Double) -> String {
         let minutes = UInt8(seconds / 60.0)
         let seconds = UInt8(seconds % 60.0)

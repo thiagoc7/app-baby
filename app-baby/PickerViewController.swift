@@ -22,7 +22,6 @@ class PickerViewController: UIViewController {
     var delegate: PickerViewControllerDelegate!
     
     var seconds: Double! = 0.0
-    var senderTimer: String! = ""
     
     var segmentOptions: [Double] = [600, 900, 1200, 1500]
     var segmentTitles = ["10 min", "15 min", "20 min", "25 min"]

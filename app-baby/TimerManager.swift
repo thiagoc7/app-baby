@@ -14,6 +14,8 @@ protocol TimerManagerDelagate {
     func updateRightTimerLabel(text: String)
     func updateStartTimerLabel(text: String)
     func updateLeftAndRightIcon(update: Bool)
+    func updateNextTimeCell(timer: Timer)
+    func updateLastTimeCell()
 }
 
 class TimerManager: NSObject {
@@ -24,30 +26,37 @@ class TimerManager: NSObject {
     let store = NSUserDefaults.standardUserDefaults()
     
     var timer = Timer()
+    var nextTimeCellUpdaterTimerObject = NSTimer()
     var leftTimerObject = NSTimer()
     var rightTimerObject = NSTimer()
     
-    var delegate:TimerManagerDelagate!
+    var delegate: TimerManagerDelagate!
     
     
     // MARK: Properties Observers
     
-    var isRunning = false {
+    var isRunning = false {        
         didSet {
             var timeLabel = "-- --"
             if isRunning {
                 timer.startTime = NSDate()
                 timeLabel = timer.startTimeHourString
+                
+                nextTimeCellUpdaterTimerObject = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateNextTimeCell"), userInfo: nil, repeats: true)
         
                 store.setObject(timer.startTime, forKey: "startTime")
                 store.synchronize()
+            } else {
+                nextTimeCellUpdaterTimerObject.invalidate()
             }
             delegate?.updateStartTimerLabel(timeLabel)
+            updateNextTimeCell()
         }
     }
     
     var leftTimerRunning: Bool = false {
         didSet {
+            
             if leftTimerRunning {
                 leftTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLeftTimer"), userInfo: nil, repeats: true)
                 
@@ -57,9 +66,9 @@ class TimerManager: NSObject {
                 if !isRunning {
                     isRunning = true
                 }
-                
             } else {
                 leftTimerObject.invalidate()
+                delegate?.updateLeftTimerLabel("00:00")
             }
         }
     }
@@ -79,6 +88,7 @@ class TimerManager: NSObject {
                 
             } else {
                 rightTimerObject.invalidate()
+                delegate?.updateRightTimerLabel("00:00")
             }
         }
     }
@@ -106,6 +116,27 @@ class TimerManager: NSObject {
     func updateRightTimer() {
         timer.rightTimerSeconds++
         delegate?.updateRightTimerLabel(timer.rightTimerSecondsString)
+    }
+    
+    func reset() {
+        saveCurrentTimer()
+        setInitialScreen()
+    }
+    
+    func setInitialScreen() {
+        delegate?.updateLastTimeCell()
+        updateNextTimeCell()
+    }
+    
+    func updateNextTimeCell() {
+        let storedTimerObject = realm.objects(Timer).last
+        let currentTimerObject = self.timer
+        
+        if self.isRunning == true || (storedTimerObject == nil){
+            delegate?.updateNextTimeCell(currentTimerObject)
+        } else {
+            delegate?.updateNextTimeCell(storedTimerObject!)
+        }
     }
     
     

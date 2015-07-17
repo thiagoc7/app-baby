@@ -13,6 +13,7 @@ class SettingsTableViewController: UITableViewController, PickerViewControllerDe
     // MARK: Outlets ans vars
     
     @IBOutlet weak var nextTimerInLabel: UILabel!
+    @IBOutlet weak var nextTimerSwitch: UISwitch!
     @IBOutlet weak var reminderForEachLabel: UILabel!
     @IBOutlet weak var reminderForTotalLabel: UILabel!
     
@@ -26,6 +27,7 @@ class SettingsTableViewController: UITableViewController, PickerViewControllerDe
         super.viewDidLoad()
         
         updateLabels()
+        nextTimerSwitch.setOn(settings.nextTimerReminder, animated: true)
     }
     
     func updateSeconds(seconds: Double){
@@ -53,8 +55,7 @@ class SettingsTableViewController: UITableViewController, PickerViewControllerDe
     }
     
     @IBAction func nextTimerAlarmSwitch(sender: UISwitch) {
-                let switchStatus = sender.on
-                print(switchStatus)
+        settings.nextTimerReminder = sender.on
     }
 
     
