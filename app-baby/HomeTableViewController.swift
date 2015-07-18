@@ -33,7 +33,6 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     
     let timerManager = TimerManager()
     let alerts = AlertsManager()
-    var settings = SettingsManager()
     // MARK: Init
     
     override func viewDidLoad() {
@@ -99,8 +98,9 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     }
     
     func updateNextTimeCell(displayTimer: Timer) {
-        nextTime.text = displayTimer.startTimeHourPlusSecondsString(settings.nextTimerIn)
-        nextTimeDelayLabel.text = displayTimer.startTimeHourHelperString(settings.nextTimerIn)
+        let seconds = SettingsManager().nextTimerIn
+        nextTime.text = displayTimer.startTimeHourPlusSecondsString(seconds)
+        nextTimeDelayLabel.text = displayTimer.startTimeHourHelperString(seconds)
     }
     
     func updateLeftTimerLabel(text: String) {

@@ -183,6 +183,8 @@ class TimerManager: NSObject {
             }
             
             store.removeObjectForKey("background")
+            
+            updateNextTimeCell()
         }
     }
     

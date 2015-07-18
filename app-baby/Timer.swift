@@ -43,9 +43,9 @@ class Timer: Object {
             let roundedInterval = round(interval / 60) * 60
             let formatter = NSDateComponentsFormatter()
             formatter.unitsStyle = .Short
-            return "in \(formatter.stringFromTimeInterval(roundedInterval)!)"
+            return NSLocalizedString("IN", comment: "in") + formatter.stringFromTimeInterval(roundedInterval)!
         } else {
-            return "overdue"
+            return NSLocalizedString("OVERDUE", comment: "overdue")
         }
     }
     

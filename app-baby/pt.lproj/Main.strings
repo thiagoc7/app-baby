@@ -1,0 +1,117 @@
+
+/* Class = "UILabel"; text = "Last Time"; ObjectID = "0e7-NS-ceM"; */
+"0e7-NS-ceM.text" = "Última";
+
+/* Class = "UIButton"; normalTitle = "No Reminder"; ObjectID = "2nG-fZ-517"; */
+"2nG-fZ-517.normalTitle" = "Sem Lembrete";
+
+/* Class = "UILabel"; text = "15 min"; ObjectID = "3FY-rC-3bc"; */
+"3FY-rC-3bc.text" = "15 min";
+
+/* Class = "UIButton"; normalTitle = "Set"; ObjectID = "80z-iy-bcJ"; */
+"80z-iy-bcJ.normalTitle" = "Escolher";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "A6i-OE-lrA"; */
+"A6i-OE-lrA.text" = "00:00";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "A6n-o6-EAw"; */
+"A6n-o6-EAw.text" = "00:00";
+
+/* Class = "UILabel"; text = "Hour"; ObjectID = "CGu-5q-u9I"; */
+"CGu-5q-u9I.text" = "Hour";
+
+/* Class = "UILabel"; text = "3 hours"; ObjectID = "F2S-WD-fiM"; */
+"F2S-WD-fiM.text" = "3 hours";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "GUE-Uf-bmr"; */
+"GUE-Uf-bmr.text" = "00:00";
+
+/* Class = "UILabel"; text = "In 15 minutes"; ObjectID = "IEA-dr-Sbl"; */
+"IEA-dr-Sbl.text" = "In 15 minutes";
+
+/* Class = "UISegmentedControl"; JGb-jq-aCl.segmentTitles[0] = "5 min"; ObjectID = "JGb-jq-aCl"; */
+"JGb-jq-aCl.segmentTitles[0]" = "5 min";
+
+/* Class = "UISegmentedControl"; JGb-jq-aCl.segmentTitles[1] = "10 min"; ObjectID = "JGb-jq-aCl"; */
+"JGb-jq-aCl.segmentTitles[1]" = "10 min";
+
+/* Class = "UISegmentedControl"; JGb-jq-aCl.segmentTitles[2] = "15 min"; ObjectID = "JGb-jq-aCl"; */
+"JGb-jq-aCl.segmentTitles[2]" = "15 min";
+
+/* Class = "UISegmentedControl"; JGb-jq-aCl.segmentTitles[3] = "20 min"; ObjectID = "JGb-jq-aCl"; */
+"JGb-jq-aCl.segmentTitles[3]" = "20 min";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "K9g-Pu-f2g"; */
+"K9g-Pu-f2g.text" = "00:00";
+
+/* Class = "UILabel"; text = "Reminder"; ObjectID = "LGM-zQ-VAL"; */
+"LGM-zQ-VAL.text" = "Lembrete";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "NNK-7X-JJI"; */
+"NNK-7X-JJI.title" = "Configurações";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "NdH-mZ-zBo"; */
+"NdH-mZ-zBo.text" = "00:00";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "OyY-S0-EYt"; */
+"OyY-S0-EYt.title" = "Ok";
+
+/* Class = "UILabel"; text = "Reminde each"; ObjectID = "Oze-C4-0tF"; */
+"Oze-C4-0tF.text" = "Lembrar a cada";
+
+/* Class = "UITableViewSection"; headerTitle = "Timers"; ObjectID = "P6G-eJ-k8C"; */
+"P6G-eJ-k8C.headerTitle" = "Timers";
+
+/* Class = "UITableViewSection"; headerTitle = "Next Timer"; ObjectID = "Qdl-0Q-e9e"; */
+"Qdl-0Q-e9e.headerTitle" = "Próxima mamada";
+
+/* Class = "UILabel"; text = "Next timer in"; ObjectID = "U1e-YV-v32"; */
+"U1e-YV-v32.text" = "Após";
+
+/* Class = "UILabel"; text = "Reset"; ObjectID = "VGg-b8-86F"; */
+"VGg-b8-86F.text" = "Reset";
+
+/* Class = "UITableViewSection"; headerTitle = "For each breast"; ObjectID = "XUX-Qh-oQV"; */
+"XUX-Qh-oQV.headerTitle" = "Para cada peito";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "aTb-3T-bVZ"; */
+"aTb-3T-bVZ.text" = "00:00";
+
+/* Class = "UIBarButtonItem"; title = "All"; ObjectID = "d5e-Ki-eeW"; */
+"d5e-Ki-eeW.title" = "Histórico";
+
+/* Class = "UILabel"; text = "30 min"; ObjectID = "eyb-Qx-TdS"; */
+"eyb-Qx-TdS.text" = "30 min";
+
+/* Class = "UITableViewSection"; headerTitle = "For Total Time"; ObjectID = "hNO-Ly-Y3T"; */
+"hNO-Ly-Y3T.headerTitle" = "Para tempo total";
+
+/* Class = "UILabel"; text = "Started at"; ObjectID = "jyT-M2-kOy"; */
+"jyT-M2-kOy.text" = "Início";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "kjP-ub-DFJ"; */
+"kjP-ub-DFJ.text" = "00:00";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "miR-ae-kNz"; */
+"miR-ae-kNz.text" = "data";
+
+/* Class = "UINavigationItem"; title = "All Timers"; ObjectID = "pfc-d4-B4w"; */
+"pfc-d4-B4w.title" = "Todos os Timers";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "pvV-wU-hFq"; */
+"pvV-wU-hFq.text" = "00:00";
+
+/* Class = "UILabel"; text = "Next Time"; ObjectID = "rGB-DV-WTd"; */
+"rGB-DV-WTd.text" = "Próxima Mamada";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "s7a-eA-Axe"; */
+"s7a-eA-Axe.title" = "Home";
+
+/* Class = "UILabel"; text = "Remind after"; ObjectID = "uBp-Kv-JpD"; */
+"uBp-Kv-JpD.text" = "Lembrar após";
+
+/* Class = "UITableViewController"; title = "All Timers"; ObjectID = "vPB-Q5-RYf"; */
+"vPB-Q5-RYf.title" = "Todos os timers";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "zcS-mx-Lif"; */
+"zcS-mx-Lif.text" = "00:00";

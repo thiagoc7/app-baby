@@ -20,11 +20,11 @@ class AlertsManager: NSObject {
     let nextReminderId = "NEXT_REMINDER"
     
     var leftReminderBodyText: String {
-        return "left - " + settings.eachBreastReminderString
+        return NSLocalizedString("LEFT_SIDE", comment: "left side") + " - " + settings.eachBreastReminderString
     }
     
     var rightReminderBodyText: String {
-        return "right - " + settings.eachBreastReminderString
+        return "right side - " + settings.eachBreastReminderString
     }
     
     var totalReminderBodyText: String {

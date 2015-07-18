@@ -2,22 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a8a1e7-fc43-44b4-a0c0-8bf59630c57d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/AlertsManager.swift" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/icon_left_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/icon_left_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/icon_left_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/icon_left_fill_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/icon_left_fill_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/icon_left_fill_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/en.lproj/icon_left_fill_l.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pt.lproj/icon_left_fill_l.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pt.lproj/icon_left_l.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/icon_right_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/icon_right_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/icon_right_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/icon_right_fill_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/icon_right_fill_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/icon_right_fill_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/s_icon_left_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/s_icon_left_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/s_icon_left_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/s_icon_left_color_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/s_icon_left_color_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/s_icon_left_color_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/s_icon_right_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/s_icon_right_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/s_icon_right_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/s_icon_right_color_br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/s_icon_right_color_br@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/s_icon_right_color_br@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/en.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/pt.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/pt.lproj/Main.strings" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left.imageset/icon_left@2x.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left.imageset/icon_left@3x.png" afterPath="$PROJECT_DIR$/en.lproj/icon_left_l.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcworkspace/xcuserdata/thiago.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/app-baby.xcworkspace/xcuserdata/thiago.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/AlertsManager.swift" afterPath="$PROJECT_DIR$/app-baby/AlertsManager.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/AppDelegate.swift" afterPath="$PROJECT_DIR$/app-baby/AppDelegate.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/HomeTableViewController.swift" afterPath="$PROJECT_DIR$/app-baby/HomeTableViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Info.plist" afterPath="$PROJECT_DIR$/app-baby/Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/SettingsTableViewController.swift" afterPath="$PROJECT_DIR$/app-baby/SettingsTableViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-Realm.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-Realm.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-RealmSwift.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-RealmSwift.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-Realm.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-Realm.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-RealmSwift.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-RealmSwift.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/SettingsManager.swift" afterPath="$PROJECT_DIR$/app-baby/SettingsManager.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Timer.swift" afterPath="$PROJECT_DIR$/app-baby/Timer.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/TimerManager.swift" afterPath="$PROJECT_DIR$/app-baby/TimerManager.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/app-baby.xcscheme" afterPath="$PROJECT_DIR$/app-baby.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/app-baby.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/app-baby.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
     <ignored path="app-baby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +75,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9ac6a983c2c407807685b8adcc78027925adde1d" />
   <component name="FavoritesManager">
     <favorites_list name="app-baby" />
   </component>

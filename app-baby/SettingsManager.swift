@@ -23,7 +23,7 @@ class SettingsManager: NSObject {
         }
     }
     
-    var nextTimerReminder: Bool = true {
+    var nextTimerReminder: Bool = false {
         didSet {
             store.setObject(nextTimerReminder, forKey: "nextTimerReminder")
             store.synchronize()
