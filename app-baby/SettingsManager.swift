@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsManager: NSObject {
     
-    let store = NSUserDefaults.standardUserDefaults()
+    let store = NSUserDefaults(suiteName: "group.app.baby")!
     
     var nextTimerIn: Double = 10800.0 {
         didSet {

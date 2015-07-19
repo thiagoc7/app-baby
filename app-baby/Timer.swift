@@ -59,13 +59,14 @@ class Timer: Object {
     
     func hourString (date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.dateStyle = .NoStyle
+        dateFormatter.timeStyle = .ShortStyle
         return dateFormatter.stringFromDate(date)
     }
     
     func dateString (date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "d/M"
+        dateFormatter.dateFormat = NSLocalizedString("DATE_FORMAT", comment: "date format")
         return dateFormatter.stringFromDate(date)
     }
 }

@@ -88,7 +88,9 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     func updateLastTimeCell() {
         if let lastTimerObject = timerManager.realm.objects(Timer).last {
             let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
+            dateFormatter.dateStyle = .NoStyle
+            dateFormatter.timeStyle = .ShortStyle
+            
             lastTime.text = dateFormatter.stringFromDate(lastTimerObject.startTime)
             lastTimeLeft.text = lastTimerObject.leftTimerSecondsString
             lastTimeRight.text = lastTimerObject.rightTimerSecondsString

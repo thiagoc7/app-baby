@@ -23,7 +23,7 @@ class TimerManager: NSObject {
     // MARK: Own Properties
     
     let realm = Realm()
-    let store = NSUserDefaults.standardUserDefaults()
+    let store = NSUserDefaults(suiteName: "group.app.baby")!
     
     var timer = Timer()
     var nextTimeCellUpdaterTimerObject = NSTimer()
@@ -176,7 +176,7 @@ class TimerManager: NSObject {
                 
                 if let startTime = store.objectForKey("startTime") as? NSDate {
                     timer.startTime = startTime
-                    store.removeObjectForKey("startTime")
+//                    store.removeObjectForKey("startTime")
                 }
                 
                 store.removeObjectForKey("backgroundTime")
@@ -193,7 +193,7 @@ class TimerManager: NSObject {
             store.setObject(true, forKey: "background")
             store.setObject(timer.leftIsTheLast, forKey: "leftIsTheLast")
             store.setObject(NSDate(), forKey: "backgroundTime")
-            store.setObject(timer.startTime, forKey: "startTime")
+//            store.setObject(timer.startTime, forKey: "startTime")
             
             if leftTimerRunning {
                 leftTimerRunning = false

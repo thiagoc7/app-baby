@@ -7,5 +7,7 @@
 */
 
 LEFT_SIDE="lado esquerdo";
-IN="em";
+IN="em ";
 OVERDUE="atrasado";
+NEXT="próxima";
+DATE_FORMAT="d/M";

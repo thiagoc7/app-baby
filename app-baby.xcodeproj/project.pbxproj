@@ -31,6 +31,11 @@
 		AF77A5F21B5AAF5800C48B6E /* s_icon_left_l.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77A5F41B5AAF5800C48B6E /* s_icon_left_l.png */; };
 		AF77A5F61B5AB02300C48B6E /* s_icon_right_color_l.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77A5F81B5AB02300C48B6E /* s_icon_right_color_l.png */; };
 		AF77A5FA1B5AB02E00C48B6E /* s_icon_right_l.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77A5FC1B5AB02E00C48B6E /* s_icon_right_l.png */; };
+		AF77A6451B5B340700C48B6E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF77A6441B5B340700C48B6E /* NotificationCenter.framework */; };
+		AF77A64A1B5B340700C48B6E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77A6491B5B340700C48B6E /* TodayViewController.swift */; };
+		AF77A64C1B5B340700C48B6E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF77A64B1B5B340700C48B6E /* MainInterface.storyboard */; };
+		AF77A64F1B5B340700C48B6E /* app baby widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF77A6431B5B340700C48B6E /* app baby widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF77A6561B5B39A200C48B6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF77A5AB1B59DD2D00C48B6E /* Localizable.strings */; };
 		BCFEEF2A7DF7FA3884188748 /* Pods_app_babyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658E10AEAB95593308FEF8A6 /* Pods_app_babyTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,7 +47,28 @@
 			remoteGlobalIDString = AF6F8C1D1B49C87F00A46D05;
 			remoteInfo = "app-baby";
 		};
+		AF77A64D1B5B340700C48B6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF6F8C161B49C87F00A46D05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF77A6421B5B340700C48B6E;
+			remoteInfo = "app baby widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF77A6531B5B340700C48B6E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AF77A64F1B5B340700C48B6E /* app baby widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0017401199566EA90FDB774B /* Pods-app-babyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-babyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +113,13 @@
 		AF77A5F91B5AB02500C48B6E /* pt */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pt; path = pt.lproj/s_icon_right_color_l.png; sourceTree = "<group>"; };
 		AF77A5FB1B5AB02E00C48B6E /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/s_icon_right_l.png; sourceTree = "<group>"; };
 		AF77A5FD1B5AB02F00C48B6E /* pt */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pt; path = pt.lproj/s_icon_right_l.png; sourceTree = "<group>"; };
+		AF77A6431B5B340700C48B6E /* app baby widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "app baby widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF77A6441B5B340700C48B6E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		AF77A6481B5B340700C48B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF77A6491B5B340700C48B6E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		AF77A64B1B5B340700C48B6E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		AF77A6541B5B371500C48B6E /* app baby widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "app baby widget.entitlements"; sourceTree = "<group>"; };
+		AF77A6551B5B379800C48B6E /* app-baby.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "app-baby.entitlements"; sourceTree = "<group>"; };
 		B375FF8190450F9745440115 /* Pods_app_baby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_baby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +140,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF77A6401B5B340700C48B6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF77A6451B5B340700C48B6E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +156,7 @@
 			children = (
 				B375FF8190450F9745440115 /* Pods_app_baby.framework */,
 				658E10AEAB95593308FEF8A6 /* Pods_app_babyTests.framework */,
+				AF77A6441B5B340700C48B6E /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +166,7 @@
 			children = (
 				AF6F8C201B49C87F00A46D05 /* app-baby */,
 				AF6F8C361B49C87F00A46D05 /* app-babyTests */,
+				AF77A6461B5B340700C48B6E /* app baby widget */,
 				AF6F8C1F1B49C87F00A46D05 /* Products */,
 				CBE3B35A649241EDAD94C102 /* Pods */,
 				905103C8F2F2827798AE2111 /* Frameworks */,
@@ -135,6 +178,7 @@
 			children = (
 				AF6F8C1E1B49C87F00A46D05 /* app-baby.app */,
 				AF6F8C331B49C87F00A46D05 /* app-babyTests.xctest */,
+				AF77A6431B5B340700C48B6E /* app baby widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +186,7 @@
 		AF6F8C201B49C87F00A46D05 /* app-baby */ = {
 			isa = PBXGroup;
 			children = (
+				AF77A6551B5B379800C48B6E /* app-baby.entitlements */,
 				AF77A59C1B57C78E00C48B6E /* Models */,
 				AF77A59F1B57C7BA00C48B6E /* Controllers */,
 				AF77A59D1B57C79E00C48B6E /* Views */,
@@ -234,6 +279,25 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		AF77A6461B5B340700C48B6E /* app baby widget */ = {
+			isa = PBXGroup;
+			children = (
+				AF77A6541B5B371500C48B6E /* app baby widget.entitlements */,
+				AF77A6491B5B340700C48B6E /* TodayViewController.swift */,
+				AF77A64B1B5B340700C48B6E /* MainInterface.storyboard */,
+				AF77A6471B5B340700C48B6E /* Supporting Files */,
+			);
+			path = "app baby widget";
+			sourceTree = "<group>";
+		};
+		AF77A6471B5B340700C48B6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF77A6481B5B340700C48B6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CBE3B35A649241EDAD94C102 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,10 +322,12 @@
 				AF6F8C1C1B49C87F00A46D05 /* Resources */,
 				7BCE4E17CD1353B8E6A2216C /* Embed Pods Frameworks */,
 				509B024A63783BC35DF16078 /* Copy Pods Resources */,
+				AF77A6531B5B340700C48B6E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF77A64E1B5B340700C48B6E /* PBXTargetDependency */,
 			);
 			name = "app-baby";
 			productName = "app-baby";
@@ -289,6 +355,23 @@
 			productReference = AF6F8C331B49C87F00A46D05 /* app-babyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AF77A6421B5B340700C48B6E /* app baby widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF77A6521B5B340700C48B6E /* Build configuration list for PBXNativeTarget "app baby widget" */;
+			buildPhases = (
+				AF77A63F1B5B340700C48B6E /* Sources */,
+				AF77A6401B5B340700C48B6E /* Frameworks */,
+				AF77A6411B5B340700C48B6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "app baby widget";
+			productName = "app baby widget";
+			productReference = AF77A6431B5B340700C48B6E /* app baby widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -302,10 +385,24 @@
 					AF6F8C1D1B49C87F00A46D05 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 3976JN2XGC;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AF6F8C321B49C87F00A46D05 = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = AF6F8C1D1B49C87F00A46D05;
+					};
+					AF77A6421B5B340700C48B6E = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3976JN2XGC;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -325,6 +422,7 @@
 			targets = (
 				AF6F8C1D1B49C87F00A46D05 /* app-baby */,
 				AF6F8C321B49C87F00A46D05 /* app-babyTests */,
+				AF77A6421B5B340700C48B6E /* app baby widget */,
 			);
 		};
 /* End PBXProject section */
@@ -353,6 +451,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF77A6411B5B340700C48B6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF77A64C1B5B340700C48B6E /* MainInterface.storyboard in Resources */,
+				AF77A6561B5B39A200C48B6E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +584,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF77A63F1B5B340700C48B6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF77A64A1B5B340700C48B6E /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -484,6 +599,11 @@
 			isa = PBXTargetDependency;
 			target = AF6F8C1D1B49C87F00A46D05 /* app-baby */;
 			targetProxy = AF6F8C341B49C87F00A46D05 /* PBXContainerItemProxy */;
+		};
+		AF77A64E1B5B340700C48B6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF77A6421B5B340700C48B6E /* app baby widget */;
+			targetProxy = AF77A64D1B5B340700C48B6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -675,6 +795,7 @@
 			baseConfigurationReference = A06874D9DE9AAD75C343D311 /* Pods-app-baby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "app-baby/app-baby.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "app-baby/Info.plist";
@@ -690,6 +811,7 @@
 			baseConfigurationReference = 6CC1A87EEDC24B7B1EF5DBAB /* Pods-app-baby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "app-baby/app-baby.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "app-baby/Info.plist";
@@ -736,6 +858,40 @@
 			};
 			name = Release;
 		};
+		AF77A6501B5B340700C48B6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "app baby widget/app baby widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "app baby widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AF77A6511B5B340700C48B6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "app baby widget/app baby widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "app baby widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -765,6 +921,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AF77A6521B5B340700C48B6E /* Build configuration list for PBXNativeTarget "app baby widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF77A6501B5B340700C48B6E /* Debug */,
+				AF77A6511B5B340700C48B6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
