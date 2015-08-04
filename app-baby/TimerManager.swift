@@ -39,13 +39,9 @@ class TimerManager: NSObject {
         didSet {
             var timeLabel = "-- --"
             if isRunning {
-                timer.startTime = NSDate()
+                setStartTime()
                 timeLabel = timer.startTimeHourString
-                
-                nextTimeCellUpdaterTimerObject = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateNextTimeCell"), userInfo: nil, repeats: true)
-        
-                store.setObject(timer.startTime, forKey: "startTime")
-                store.synchronize()
+                nextTimeCellUpdaterTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateNextTimeCell"), userInfo: nil, repeats: true)
             } else {
                 nextTimeCellUpdaterTimerObject.invalidate()
             }
@@ -138,20 +134,41 @@ class TimerManager: NSObject {
             delegate?.updateNextTimeCell(storedTimerObject!)
         }
     }
+
+    func setStartTime() {
+        if let background  = store.objectForKey("background") as? Bool {
+            timer.startTime = store.objectForKey("startTime") as! NSDate
+        } else {
+            timer.startTime = NSDate()
+            store.setObject(timer.startTime, forKey: "startTime")
+            store.synchronize()
+        }
+    }
     
-    
+    func updateStartTime(delay: Double) {
+        timer.startTime = timer.startTime.dateByAddingTimeInterval(delay)
+        store.setObject(timer.startTime, forKey: "startTime")
+        store.synchronize()
+        delegate?.updateStartTimerLabel(timer.startTimeHourString)
+    }
+
+
     // MARK: Background
     
     func resumeLeftTimer(seconds: Double, backgroundTime: NSDate) {
         timer.leftTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
         delegate?.updateLeftTimerLabel(timer.leftTimerSecondsString)
         leftTimerRunning = true
+        isRunning = true
+        nextTimeCellUpdaterTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateNextTimeCell"), userInfo: nil, repeats: true)
     }
     
     func resumeRightTimer(seconds: Double, backgroundTime: NSDate) {
         timer.rightTimerSeconds = seconds + NSDate().timeIntervalSinceDate(backgroundTime)
         delegate?.updateRightTimerLabel(timer.rightTimerSecondsString)
         rightTimerRunning = true
+        isRunning = true
+        nextTimeCellUpdaterTimerObject = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateNextTimeCell"), userInfo: nil, repeats: true)
     }
     
     func applicationDidBecomeActive() {
@@ -174,11 +191,6 @@ class TimerManager: NSObject {
                     store.removeObjectForKey("rightTimerSeconds")
                 }
                 
-                if let startTime = store.objectForKey("startTime") as? NSDate {
-                    timer.startTime = startTime
-//                    store.removeObjectForKey("startTime")
-                }
-                
                 store.removeObjectForKey("backgroundTime")
             }
             
@@ -193,8 +205,7 @@ class TimerManager: NSObject {
             store.setObject(true, forKey: "background")
             store.setObject(timer.leftIsTheLast, forKey: "leftIsTheLast")
             store.setObject(NSDate(), forKey: "backgroundTime")
-//            store.setObject(timer.startTime, forKey: "startTime")
-            
+
             if leftTimerRunning {
                 leftTimerRunning = false
                 store.setObject(timer.leftTimerSeconds, forKey: "leftTimerSeconds")

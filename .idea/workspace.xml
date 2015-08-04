@@ -2,63 +2,199 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a8a1e7-fc43-44b4-a0c0-8bf59630c57d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/icon_left_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/icon_left_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/icon_left_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/icon_left_fill_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/icon_left_fill_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/icon_left_fill_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/en.lproj/icon_left_fill_l.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pt.lproj/icon_left_fill_l.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pt.lproj/icon_left_l.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/icon_right_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/icon_right_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/icon_right_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/icon_right_fill_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/icon_right_fill_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/icon_right_fill_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/s_icon_left_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/s_icon_left_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/s_icon_left_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/s_icon_left_color_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/s_icon_left_color_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/s_icon_left_color_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/s_icon_right_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/s_icon_right_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/s_icon_right_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/s_icon_right_color_br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/s_icon_right_color_br@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/s_icon_right_color_br@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left_fill_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_right_fill_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_left_color_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/Images.xcassets/s_icon_right_color_br.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/en.lproj/Localizable.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/pt.lproj/Localizable.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app-baby/pt.lproj/Main.strings" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left.imageset/icon_left@2x.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app-baby/Images.xcassets/icon_left.imageset/icon_left@3x.png" afterPath="$PROJECT_DIR$/en.lproj/icon_left_l.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/Realm/realm/util/bind.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMArray.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMCollection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMConstants.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMMigration.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMObject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMObjectBase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMObjectSchema.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMPlatform.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMProperty.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMRealm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMResults.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/RLMSchema.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Realm/realm/Realm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-Realm.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-RealmSwift.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-Realm.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-RealmSwift.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/bind.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-Realm/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-Realm/Pods-app-baby-Realm-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-Realm/Pods-app-baby-Realm-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-Realm/Pods-app-baby-Realm-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-Realm/Pods-app-baby-Realm.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-Realm/Pods-app-baby-Realm.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Pods-app-baby-RealmSwift-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Pods-app-baby-RealmSwift-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Pods-app-baby-RealmSwift-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Pods-app-baby-RealmSwift-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Pods-app-baby-RealmSwift.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby-RealmSwift/Pods-app-baby-RealmSwift.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby-environment.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-Realm/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-Realm/Pods-app-babyTests-Realm-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-Realm/Pods-app-babyTests-Realm-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-Realm/Pods-app-babyTests-Realm-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-Realm/Pods-app-babyTests-Realm.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-Realm/Pods-app-babyTests-Realm.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Pods-app-babyTests-RealmSwift-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Pods-app-babyTests-RealmSwift-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Pods-app-babyTests-RealmSwift-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Pods-app-babyTests-RealmSwift-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Pods-app-babyTests-RealmSwift.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests-RealmSwift/Pods-app-babyTests-RealmSwift.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests-environment.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcodeproj/project.xcworkspace/xcuserdata/thiago.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/app-baby.xcodeproj/project.xcworkspace/xcuserdata/thiago.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcworkspace/xcuserdata/thiago.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/app-baby.xcworkspace/xcuserdata/thiago.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/AlertsManager.swift" afterPath="$PROJECT_DIR$/app-baby/AlertsManager.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/AppDelegate.swift" afterPath="$PROJECT_DIR$/app-baby/AppDelegate.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/core/librealm-ios.a" afterPath="$PROJECT_DIR$/Pods/Realm/core/librealm-ios.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Aliases.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Aliases.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/HomeTableViewController.swift" afterPath="$PROJECT_DIR$/app-baby/HomeTableViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app baby widget/Info.plist" afterPath="$PROJECT_DIR$/app baby widget/Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Info.plist" afterPath="$PROJECT_DIR$/app-baby/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/List.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/List.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/app-baby/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-Realm.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-Realm.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-RealmSwift.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby-RealmSwift.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/pt.lproj/Main.strings" afterPath="$PROJECT_DIR$/app-baby/pt.lproj/Main.strings" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Migration.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Migration.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Object.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Object.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby-frameworks.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby-frameworks.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby-resources.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-baby/Pods-app-baby.release.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-baby.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-Realm.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-Realm.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-RealmSwift.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests-RealmSwift.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests-frameworks.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests-frameworks.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests-resources.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-app-babyTests/Pods-app-babyTests.release.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/Pods-app-babyTests.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/SettingsManager.swift" afterPath="$PROJECT_DIR$/app-baby/SettingsManager.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/Timer.swift" afterPath="$PROJECT_DIR$/app-baby/Timer.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Property.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Property.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/README.md" afterPath="$PROJECT_DIR$/Pods/Realm/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/README.md" afterPath="$PROJECT_DIR$/Pods/RealmSwift/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMAccessor.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMAccessor.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMArray.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMArray.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMArray.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMArray.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMArrayLinkView.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMArrayLinkView.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMArray_Private.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMArray_Private.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMCollection.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMCollection.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMMigration.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMMigration.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMMigration.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMMigration.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObject.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObject.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObject.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectBase.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectBase.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObjectBase.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObjectBase.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectSchema.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectSchema.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObjectSchema.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObjectSchema.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectSchema_Private.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectSchema_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectSchema_Private.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectSchema_Private.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectStore.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObjectStore.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObjectStore.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMObjectStore.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObject_Private.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMObject_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMProperty.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMProperty.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMProperty.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMProperty.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMProperty_Private.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMProperty_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMQueryUtil.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMQueryUtil.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMQueryUtil.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMQueryUtil.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealm.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealm.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMRealm.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMRealm.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealmUtil.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealmUtil.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMRealmUtil.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMRealmUtil.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealm_Dynamic.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealm_Dynamic.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealm_Private.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMRealm_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMResults.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMResults.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMResults.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMResults.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMSchema.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMSchema.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMSchema.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMSchema.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMSchema_Private.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMSchema_Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMUpdateChecker.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMUpdateChecker.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMUtil.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/RLMUtil.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/Realm/RLMUtil.mm" afterPath="$PROJECT_DIR$/Pods/Realm/Realm/RLMUtil.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Realm.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Realm.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Results.swift" afterPath="$PROJECT_DIR$/Pods/RealmSwift/RealmSwift/Results.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby/TimerManager.swift" afterPath="$PROJECT_DIR$/app-baby/TimerManager.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/alloc.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/alloc.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/alloc_slab.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/alloc_slab.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/app-baby.xcscheme" afterPath="$PROJECT_DIR$/app-baby.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/app-baby.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_basic.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_basic.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_binary.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_binary.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_blob.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_blob.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_blobs_big.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_blobs_big.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_integer.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_integer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_string.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_string.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/array_string_long.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/array_string_long.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/assert.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/assert.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/binary_data.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/binary_data.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/bind_ptr.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/bind_ptr.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/buffer.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/buffer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/build.sh" afterPath="$PROJECT_DIR$/Pods/Realm/build.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/RealmSwift/build.sh" afterPath="$PROJECT_DIR$/Pods/RealmSwift/build.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_backlink.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_backlink.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_basic.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_basic.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_basic_tpl.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_basic_tpl.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_binary.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_binary.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_fwd.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_fwd.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_link.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_link.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_linkbase.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_linkbase.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_linklist.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_linklist.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_mixed.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_mixed.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_mixed_tpl.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_mixed_tpl.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_string.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_string.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_string_enum.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_string_enum.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_table.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_table.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_tpl.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_tpl.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/column_type.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/column_type.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/commit_log.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/commit_log.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/config.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/config.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/datetime.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/datetime.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/descriptor.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/descriptor.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/impl/destroy_guard.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/impl/destroy_guard.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/exceptions.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/exceptions.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/features.h" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/features.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/file.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/file.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/group.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/group.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/group_shared.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/group_shared.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/group_writer.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/group_writer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/importer.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/importer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/index_string.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/index_string.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/impl/input_stream.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/impl/input_stream.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/lang_bind_helper.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/lang_bind_helper.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/link_view.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/link_view.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/logger.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/logger.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/meta.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/meta.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/mixed.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/mixed.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/platform_specific_condvar.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/platform_specific_condvar.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-baby.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/app-baby.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/query.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/query.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/query_conditions.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/query_conditions.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/query_engine.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/query_engine.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/query_expression.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/query_expression.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/replication.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/replication.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/row.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/row.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/safe_int_ops.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/safe_int_ops.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/spec.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/spec.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/string_data.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/string_data.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/table.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/table.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/table_accessors.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/table_accessors.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/table_basic.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/table_basic.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/table_view.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/table_view.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/table_view_basic.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/table_view_basic.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/terminate.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/terminate.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/thread.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/thread.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/impl/transact_log.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/impl/transact_log.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/type_list.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/type_list.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/type_traits.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/type_traits.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/util/utf8.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/util/utf8.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/utilities.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/utilities.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/version.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/version.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Realm/include/realm/views.hpp" afterPath="$PROJECT_DIR$/Pods/Realm/include/realm/views.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/thiago.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
@@ -75,47 +211,17 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9ac6a983c2c407807685b8adcc78027925adde1d" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPhone_6_8.4_x86_64_1" />
   <component name="FavoritesManager">
     <favorites_list name="app-baby" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SettingsTableViewController.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-baby/SettingsTableViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeTableViewController.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-baby/HomeTableViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsManager.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-baby/SettingsManager.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="58" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TimerManager.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app-baby/TimerManager.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46460176">
-              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.25675675">
+              <caret line="140" column="16" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -167,6 +273,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,14 +342,29 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app-baby" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app baby widget" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.app-baby">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="app-baby" TARGET_NAME="app-baby" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="app-baby" RUN_TARGET_NAME="app-baby" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -259,35 +381,7 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-app-baby-Realm" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-app-baby-Realm" CONFIG_NAME="Debug" SCHEME_NAME="Pods-app-baby-Realm" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="Pods-app-baby-RealmSwift" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-app-baby-RealmSwift" CONFIG_NAME="Debug" SCHEME_NAME="Pods-app-baby-RealmSwift" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <configuration default="false" name="Pods-app-baby" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-app-baby" CONFIG_NAME="Debug" SCHEME_NAME="Pods-app-baby" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="Pods-app-babyTests-Realm" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-app-babyTests-Realm" CONFIG_NAME="Debug" SCHEME_NAME="Pods-app-babyTests-Realm" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="Pods-app-babyTests-RealmSwift" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-app-babyTests-RealmSwift" CONFIG_NAME="Debug" SCHEME_NAME="Pods-app-babyTests-RealmSwift" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -301,17 +395,40 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="7">
+    <configuration default="false" name="app baby widget" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="app-baby" TARGET_NAME="app baby widget" CONFIG_NAME="Debug" SCHEME_NAME="app baby widget" RUN_TARGET_PROJECT_NAME="app-baby" RUN_TARGET_NAME="app-baby" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Realm" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Realm" CONFIG_NAME="Debug" SCHEME_NAME="Realm" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="RealmSwift" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="RealmSwift" CONFIG_NAME="Debug" SCHEME_NAME="RealmSwift" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.app-baby" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Pods-app-baby-Realm" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Pods-app-baby-RealmSwift" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Pods-app-baby" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Pods-app-babyTests-Realm" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Pods-app-babyTests-RealmSwift" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Pods-app-babyTests" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Pods-app-baby" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Pods-app-babyTests" />
+      <item index="3" class="java.lang.String" itemvalue="Application.app baby widget" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Realm" />
+      <item index="5" class="java.lang.String" itemvalue="Application.RealmSwift" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="21a8a1e7-fc43-44b4-a0c0-8bf59630c57d" name="Default" comment="" />
@@ -325,24 +442,25 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2533757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -353,11 +471,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app-baby/HomeTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-baby/TimerManager.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="188" column="17" selection-start-line="188" selection-start-column="17" selection-end-line="188" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app-baby/SettingsTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -373,14 +506,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="58" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-baby/TimerManager.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-baby/SettingsManager.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3586207">
+          <caret line="64" column="58" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-baby/SettingsTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app baby widget/TodayViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-baby/HomeTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app-baby/TimerManager.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46460176">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.25675675">
+          <caret line="140" column="16" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
           <folding />
         </state>
       </provider>

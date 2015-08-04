@@ -4,77 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-app-baby-Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-app-baby-RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
 		<key>Pods-app-baby.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Pods-app-babyTests-Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Pods-app-babyTests-RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-app-babyTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>01BA921215719251D3C408DD</key>
+		<key>339355F49BAF3AF0B569EDDF74449C65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C1C51A675479768A9BB5A74</key>
+		<key>3925A2A2F4FBAA607F2799317E4B0986</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74A5EEEAA20215B31E07FEF4</key>
+		<key>8530DEDBC37DD75056E54EB064F88745</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8986188D4D1D103A7DFC4C7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA1846571B8521D32266116F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F741C378666BE7432FB283D6</key>
+		<key>971E5145C090E20DECFFE67DD5A3FC51</key>
 		<dict>
 			<key>primary</key>
 			<true/>

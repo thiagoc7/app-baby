@@ -176,12 +176,12 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
         }
         
         let startLess5 = UITableViewRowAction(style: .Normal, title: "-5m") { action, index in
-            self.timerManager.timer.startTime = self.timerManager.timer.startTime.dateByAddingTimeInterval(-300)
+            self.timerManager.updateStartTime(-300)
             self.alerts.setTotalTimerReminder(self.timerManager.timer.startTime)
         }
         
         let startMore5 = UITableViewRowAction(style: .Normal, title: "+5m") { action, index in
-            self.timerManager.timer.startTime = self.timerManager.timer.startTime.dateByAddingTimeInterval(300)
+            self.timerManager.updateStartTime(300)
             self.alerts.setTotalTimerReminder(self.timerManager.timer.startTime)
         }
         
