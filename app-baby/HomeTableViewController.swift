@@ -126,7 +126,7 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     // MARK: Helpers
     
     func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor {
-        var scanner = NSScanner(string:colorCode)
+        let scanner = NSScanner(string:colorCode)
         var color:UInt32 = 0;
         scanner.scanHexInt(&color)
         
@@ -140,7 +140,7 @@ class HomeTableViewController: UITableViewController, TimerManagerDelagate {
     
     // MARK: UITableViewDelegate Methods
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let less1 = UITableViewRowAction(style: .Normal, title: "-1m") { action, index in
             if indexPath.row == 0 {
                 

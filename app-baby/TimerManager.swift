@@ -22,7 +22,7 @@ class TimerManager: NSObject {
     
     // MARK: Own Properties
     
-    let realm = Realm()
+    let realm = try! Realm()
     let store = NSUserDefaults(suiteName: "group.app.baby")!
     
     var timer = Timer()
@@ -136,7 +136,7 @@ class TimerManager: NSObject {
     }
 
     func setStartTime() {
-        if let background  = store.objectForKey("background") as? Bool {
+        if let _  = store.objectForKey("background") as? Bool {
             timer.startTime = store.objectForKey("startTime") as! NSDate
         } else {
             timer.startTime = NSDate()
@@ -172,7 +172,7 @@ class TimerManager: NSObject {
     }
     
     func applicationDidBecomeActive() {
-        if let background  = store.objectForKey("background") as? Bool  {
+        if let _  = store.objectForKey("background") as? Bool  {
             
             if let leftIsTheLast = store.objectForKey("leftIsTheLast") as? Bool {
                 timer.leftIsTheLast = leftIsTheLast

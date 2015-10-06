@@ -14,7 +14,6 @@
 		AF6F8C291B49C87F00A46D05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F8C271B49C87F00A46D05 /* Main.storyboard */; };
 		AF6F8C2B1B49C87F00A46D05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */; };
 		AF6F8C2E1B49C87F00A46D05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6F8C2C1B49C87F00A46D05 /* LaunchScreen.xib */; };
-		AF6F8C3A1B49C87F00A46D05 /* app_babyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8C391B49C87F00A46D05 /* app_babyTests.swift */; };
 		AF6F8C441B49D37100A46D05 /* AllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */; };
 		AF6F8CDC1B4B1ADB00A46D05 /* AllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */; };
 		AF6F8CE01B4B4C5600A46D05 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */; };
@@ -85,8 +84,6 @@
 		AF6F8C2A1B49C87F00A46D05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF6F8C2D1B49C87F00A46D05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AF6F8C331B49C87F00A46D05 /* app-babyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-babyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF6F8C381B49C87F00A46D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF6F8C391B49C87F00A46D05 /* app_babyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_babyTests.swift; sourceTree = "<group>"; };
 		AF6F8C431B49D37100A46D05 /* AllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTableViewController.swift; sourceTree = "<group>"; };
 		AF6F8CDB1B4B1ADB00A46D05 /* AllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTableViewCell.swift; sourceTree = "<group>"; };
 		AF6F8CDF1B4B4C5600A46D05 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6F8C201B49C87F00A46D05 /* app-baby */,
-				AF6F8C361B49C87F00A46D05 /* app-babyTests */,
 				AF77A6461B5B340700C48B6E /* app baby widget */,
 				AF6F8C1F1B49C87F00A46D05 /* Products */,
 				CBE3B35A649241EDAD94C102 /* Pods */,
@@ -200,23 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6F8C221B49C87F00A46D05 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AF6F8C361B49C87F00A46D05 /* app-babyTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF6F8C391B49C87F00A46D05 /* app_babyTests.swift */,
-				AF6F8C371B49C87F00A46D05 /* Supporting Files */,
-			);
-			path = "app-babyTests";
-			sourceTree = "<group>";
-		};
-		AF6F8C371B49C87F00A46D05 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF6F8C381B49C87F00A46D05 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -378,8 +357,9 @@
 		AF6F8C161B49C87F00A46D05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Thiago Boucas Correa";
 				TargetAttributes = {
 					AF6F8C1D1B49C87F00A46D05 = {
@@ -393,7 +373,6 @@
 					};
 					AF6F8C321B49C87F00A46D05 = {
 						CreatedOnToolsVersion = 6.4;
-						TestTargetID = AF6F8C1D1B49C87F00A46D05;
 					};
 					AF77A6421B5B340700C48B6E = {
 						CreatedOnToolsVersion = 6.4;
@@ -580,7 +559,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6F8C3A1B49C87F00A46D05 /* app_babyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,11 +704,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -771,7 +750,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -798,11 +777,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "app-baby/app-baby.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "app-baby/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thiago.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -814,11 +794,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "app-baby/app-baby.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "app-baby/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thiago.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -828,7 +809,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0017401199566EA90FDB774B /* Pods-app-babyTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -839,8 +819,8 @@
 				);
 				INFOPLIST_FILE = "app-babyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thiago.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app-baby.app/app-baby";
 			};
 			name = Debug;
 		};
@@ -848,15 +828,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41C2992B5BD9CCB0FE9D8278 /* Pods-app-babyTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "app-babyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thiago.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app-baby.app/app-baby";
 			};
 			name = Release;
 		};
@@ -864,7 +843,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "app baby widget/app baby widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -873,6 +852,7 @@
 				INFOPLIST_FILE = "app baby widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thiago.app-baby.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -883,11 +863,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "app baby widget/app baby widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "app baby widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thiago.app-baby.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

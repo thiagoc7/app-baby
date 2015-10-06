@@ -35,7 +35,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.didReceiveMemoryWarning()
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         completionHandler(NCUpdateResult.NewData)
     }
     
@@ -45,7 +45,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
-        var url: NSURL = NSURL(fileURLWithPath: "app-baby://")!
+        let url: NSURL = NSURL(fileURLWithPath: "app-baby://")
         self.extensionContext?.openURL(url, completionHandler: nil)
     }
     
@@ -57,7 +57,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .NoStyle
             dateFormatter.timeStyle = .ShortStyle
-            print(dateFormatter.stringFromDate(delayedDate))
+            print(dateFormatter.stringFromDate(delayedDate), terminator: "")
             timeLabel.text = dateFormatter.stringFromDate(delayedDate)
             
             setDelayLabel(delayedDate.timeIntervalSinceDate(NSDate()))

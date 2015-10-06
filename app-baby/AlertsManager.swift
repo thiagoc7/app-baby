@@ -87,7 +87,7 @@ class AlertsManager: NSObject {
     // MARK: Helpers
     
     func deleteNotification(identifier: String) {
-        for notification in UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification] {
+        for notification in (UIApplication.sharedApplication().scheduledLocalNotifications! as [UILocalNotification]) {
             if (notification.userInfo!["UUID"] as! String == identifier) {
                 UIApplication.sharedApplication().cancelLocalNotification(notification) // there should be a maximum of one match on UUID
                 break
@@ -96,7 +96,7 @@ class AlertsManager: NSObject {
     }
     
     func createNotification(time: NSDate, body: String, identifier: String) {
-        var notification = UILocalNotification()
+        let notification = UILocalNotification()
         
         notification.soundName = sound
         notification.userInfo = ["UUID": identifier]

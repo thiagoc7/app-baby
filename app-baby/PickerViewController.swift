@@ -34,7 +34,7 @@ class PickerViewController: UIViewController {
 
         picker.setDate(setDateFromSeconds(seconds), animated: true)
         
-        for (index, title) in enumerate(segmentTitles) {
+        for (index, title) in segmentTitles.enumerate() {
             segment.setTitle(title, forSegmentAtIndex: index)
         }
     }

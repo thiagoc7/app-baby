@@ -11,7 +11,7 @@ import RealmSwift
 
 class AllTableViewController: UITableViewController {
     
-    let completedTimers = Realm().objects(Timer).sorted("startTime", ascending: false)
+    let completedTimers = try! Realm().objects(Timer).sorted("startTime", ascending: false)
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -40,7 +40,7 @@ class AllTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let realm = Realm()
+            let realm = try! Realm()
             realm.write {
                 realm.delete(self.completedTimers[indexPath.row])
             }
